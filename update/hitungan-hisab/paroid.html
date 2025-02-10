@@ -6,18 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <title>...</title>
-   <!-- talwind -->
-   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
-     <!-- link anime -->
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <!-- berkas style css -->
-    <link href="b navbar.css" rel="stylesheet" />
-    <link href="article-taqwiem.css" rel="stylesheet" />
-    <link href="style-footer.css" rel="stylesheet" />
-
-    <!-- Load font awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+  <title>Perhitungan Paroid</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="../../styles/style.css" rel="stylesheet" />
+  <link href="../../styles/style-footer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
 <style>
 form, #hitung {
   margin-top: 10px;
@@ -51,20 +45,16 @@ form, #hitung:focus {
         border-radius: 4px;
         cursor: pointer;
     }
-
     #kurang:hover {
         background-color: #0056b3;
     }
     #tambah:hover {
         background-color: #0056b3;
     }
-
-    /* Styling for input fields and labels */
     label {
       font-weight: bold;
       margin-right: 10px;
     }
-
     input[type="number"] {
       width: 100%;
       padding: 8px;
@@ -73,9 +63,8 @@ form, #hitung:focus {
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
+      background-color: var(--backgorund-color);
     }
-
-    /* Styling for the container of the input fields */
     article.all-articel {
       padding: 10px;
       border-radius: 8px;
@@ -85,7 +74,6 @@ form, #hitung:focus {
 </style>
 </head>
 <body>
-  <!-- bagian navbar -->
    <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
@@ -144,17 +132,17 @@ form, #hitung:focus {
  <div class="jarak"></div>
      
   <article class="all-articel">
-       <h1 class="h1-judul">Kalkulator Waris</h1>
+       <h1 class="h1-judul">Hisab Paroid</h1>
        <p class="pTglPembuatan">A. Ghofur Jan 18, 2024  9 Menit Dilihat</p>
        </article>
 
       <article class="all-articel">
         <h2 class="h1-articell"></h2>
         <label for="jumlahHarta">Jumlah Harta Waris:</label>
-        <input type="number" id="jumlahHarta" name="jumlahHarta" min="0" step="0.01">
+        <input type="number" class="kotakinput" id="jumlahHarta" name="jumlahHarta" min="0" step="0.01">
         <br>
         <label for="tanggungan">Tanggungan:</label>
-        <input type="number" id="tanggungan" name="tanggungan" min="0" step="0.01">
+        <input type="number" class="kotakinput" id="tanggungan" name="tanggungan" min="0" step="0.01">
       </article>
        <article class="all-articel" id="all-articel"> 
         <h2 class="h1-articell">Mayyit </h2><br>
@@ -600,35 +588,7 @@ https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-pla
   </script>
 
  <p>  </p>
-                    <!-- dark mode -->
-<script>
-  const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.toggle("light-theme");
-}
-
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    var theme = document.body.classList.contains("light-theme")
-      ? "light"
-      : "dark";
-  } else {
-    document.body.classList.toggle("dark-theme");
-    var theme = document.body.classList.contains("dark-theme")
-      ? "dark"
-      : "light";
-  }
-  localStorage.setItem("theme", theme);
-});
-
-</script>
-        <!-- Anime AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js">
 </script>
 <script>
@@ -643,8 +603,8 @@ btn.addEventListener("click", function () {
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
                     <!-- js file -->
-<script src="navbar.js"></script>
-<script src="scrolltop.js"></script>
+<script src="../../main/main.js"></script>
+
          
 </body>
 </html>
