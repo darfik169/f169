@@ -1,0 +1,85 @@
+html {scroll-behavior: smooth;}body {font-family: Arial;} .h1-judul {margin: 2% 2% 2% 2%;}.container {color: var(--text-all-articel);}
+.pTglPembuatan {color: #6c757d; font-size: 13px;margin-left: 9px;}header.masthead {padding-top: 10rem;padding-bottom: 20rem;text-align: center;color: #f7f7f7;background-image: url("fotopustakadarfik.png");background-repeat: no-repeat;background-attachment: scroll;background-position: center center;background-size: cover;margin-top: 10px;margin-bottom: 10px;width: 100%;} 
+ @media only screen and (max-width: 600px) {header.masthead {padding-top: 12rem;padding-bottom: 0rem;}} .li-isi .scroll {text-decoration: none;
+color: var(--text-color) ;}.li-isi { margin-bottom: 15px;} #myBtn {display: none;position: fixed; bottom: 30px;  right: 20px; z-index: 99; border: none; outline: none; background-color: var(--my-button); 
+color: #fff; cursor: pointer; padding: 8px; border-radius: 90% 90% 90% 90%; font-size: 18px;}
+.none {display: none;}.daftar-isi {margin-top: 70px;padding: 5px;background-color: var(--daftar-isi);margin: 4% 4%;border-radius: 0% 20% 3% 5%;font-size: 0.8em;color: var(--text-color);}
+@media only screen and (min-width: 400px) {.daftar-isi {font-size: 1em;}}
+@media only screen and (min-width: 576px) {.daftar-isi {font-size: 1.1em;}}
+@media only screen and (min-width: 700px) {.daftar-isi {font-size: 1.1em;}}
+@media only screen and (min-width: 900px) {.daftar-isi {font-size: 1.2em;}}
+@media only screen and (min-width: 1150px) {.daftar-isi {font-size: 1.2em;}}
+.hrJudul{border: none;border-top: 1px solid;color: #bbb;margin-left: 9px;}
+.hrDaftarIsi {border: none;border-top: 5px solid;width: 30%;margin-bottom: 10px;color: #009788;margin-left: 8px;}
+.h1-daftar-isi {margin-bottom: 1px;margin-top: 10px;font-size: 1em;margin-left: 10px;}
+@media only screen and (min-width: 400px) {.h1-daftar-isi {font-size: 1.1em;}}
+@media only screen and (min-width: 576px) {.h1-daftar-isi {font-size: 1.1em;}}
+@media only screen and (min-width: 700px) {.h1-daftar-isi {font-size: 1.1em;}}
+@media only screen and (min-width: 900px) {.h1-daftar-isi {font-size: 1.2em;}}
+@media only screen and (min-width: 1150px) {.h1-daftar-isi {font-size: 1.2em;}}
+.ul-isi{margin-left: 40px;}.jarak {margin-top: 80px;text-align: center;margin-left: 4%;margin-right: 4%;font-size: 10px;}
+@media only screen and (max-width: 600px) {.judul {font-size: 15px;}}
+.divBacaJuga {margin-top: 0px;background-color: #eaeaea;margin: 5% 30% 5% 5%;border-radius: 0% ;font-size: 14px;}
+.divBacaJuga .h1BacaJuga {margin-left: 9px;padding-top: 10px;font-size: 20px;}
+.divBacaJuga  .pBacaJuga {margin-left: 9px;padding-top: 10px;font-size: 20px;}
+.all-articel {margin-top: 70px;padding: 5px;background-color: var(--all-articel);margin-left: 4%;
+margin-right: 4%;color: var(--text-all-articel);}
+ @media only screen and (max-width: 600px) {.all-articel {margin: 2%;}}
+.all-articel > .h1-articel {margin-right: 9px;padding-top: 10px;font-size: 1em;text-align: right;}
+@media only screen and (min-width: 400px) {.all-articel > .h1-articel {font-size: 1.3em;}}
+@media only screen and (min-width: 576px) {.all-articel > .h1-articel {font-size : 1.4em;}}
+@media only screen and (min-width: 900px) {.all-articel > .h1-articel {font-size: 1.5em;}}
+@media only screen and (min-width: 1150px) {.all-articel > .h1-articel {font-size: 1.6em;}}
+@media only screen and (min-width: 1300px) {.all-articel > .h1-articel {font-size: 1.7em;}}
+.all-articel > .h1-articell {margin-left: 9px;padding-top: 10px;font-size: 0.8em;}
+@media only screen and (min-width: 400px) {.all-articel > .h1-articell {font-size: 1.3em;}}
+@media only screen and (min-width: 576px) {.all-articel > .h1-articell {font-size : 1.4em;}}
+@media only screen and (min-width: 900px) {.all-articel > .h1-articell {font-size: 1.5em;}}
+@media only screen and (min-width: 1150px) {.all-articel > .h1-articell {font-size: 1.6em;}}
+@media only screen and (min-width: 1300px) {.all-articel > .h1-articell {font-size: 1.7em;}}
+.all-articel > .p-articel {margin: 10px;font-size: 1em;}
+@media only screen and (min-width: 400px) {.all-articel > .p-articel {font-size: 1em;}}
+@media only screen and (min-width: 576px) {.all-articel > .p-articel {font-size: 1.1em;}}
+@media only screen and (min-width: 700px) {.all-articel > .p-articel {font-size: 1.2em;}}
+@media only screen and (min-width: 900px) {.all-articel > .p-articel {font-size: 1.3em;}}
+@media only screen and (min-width: 1150px) {.all-articel > .p-articel {font-size: 1.4em;}}
+.all-articel > .p-articelArab {margin: 10px;font-size: 10px;text-align: right;}
+@media only screen and (max-width: 600px) {.all-articel > .p-articelArab {font-size: 15px;}}
+.all-articel2 {margin-top: 0px;padding: 5px;background-color: var(--all-articel2);margin: 6% 6%;
+color: var(--al-articel);}
+@media only screen and (max-width: 600px) {
+.all-articel2 {margin: 3%;}}
+.dark-mode .all-articel2 {background-color: var(--all-articel2);   /*#f2f2f2*/color: var(--al-articel);}
+.all-articel2 > .h1-articel2 {margin-left: 9px;padding-top: 10px;font-size: 18px;}
+.all-articel2 > .h2-articel2 {margin: 10px;font-size: 0.9em;}
+@media only screen and (min-width: 400px) {
+.all-articel2 > .h2-articel2 {font-size: 1em;}}
+@media only screen and (min-width: 576px) {
+.all-articel2 > .h2-articel2 {font-size: 1.1em;}}
+@media only screen and (min-width: 700px) {
+.all-articel2 > .h2-articel2 {font-size: 1.2em; }}
+@media only screen and (min-width: 900px) {
+.all-articel > .p-articel {font-size: 1.3em;}  }
+@media only screen and (min-width: 1150px) {
+.all-articel > .p-articel {font-size: 1.4em;}}
+.h2-articel2 .a-articel2 {text-decoration: none;color: #009788;}
+@media only screen and (max-width: 600px) {
+.all-articel2 > .h2-articel2 {font-size: 16px;}} 
+.all-articel3 {margin-top: 70px;padding: 5px;background-color: #202c33; margin: 4% 4%;color: #eaeaea;}
+@media only screen and (max-width: 600px) {
+.all-articel3 {margin: 5%;}}
+.dark-mode .all-articel3 {background-color: #fff;color: #000;}
+.all-articel3 > .h1-articel3 {margin-left: 9px;padding-top: 10px;font-size: 20px;}
+.all-articel3 > .p-articel3 {margin: 10px;font-size: 10px;}
+@media only screen and (max-width: 600px) {
+.all-articel3 > .p-articel3 {font-size: 15px;}}
+.table-harokat {border-collapse: collapse;width: 100%;font-size: 12px;}
+.th-harokat, .td-harokat {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
+.a-link-web {text-decoration: none; color: var(--a-link-web);}
+.previous {text-decoration: none;display: inline-block;padding: 8px 16px;margin: 30px 0px 30px 30px;}
+.next {text-decoration: none;display: inline-block;padding: 8px 16px;margin-left: 0px;}
+.previous {background-color: #075E54;color: white;}
+.next {background-color: #e91e63;color: #fff;}
+.round {border-radius: 50%;}
+.dark-mode .previous {background-color: #009788;}
+.dark-mode .next {background-color: #fff;color: #000;}

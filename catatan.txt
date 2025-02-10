@@ -1,0 +1,29 @@
+Segala puji bagi allah tuhan semesta alam, hanya kepada allah saya menyembah dan hanya kepada engkaulah saya meminta pertolongan, sholawat serta salam saya panjatkan kepada kekasihnya yang sangat mulia yang agung seagung-agungnya yakni nabi muhammad sollallohu alaihis wassalam, dan juga kepada seluruh keluarganya dan para sohabatnya serta semua para umatnya, amien.
+Saya berkeinginan membuat program falak/hisab dalam bentuk webset, semoga allah kasih kelancaran dalam pembuatan program hisab ini, amien.
+Tujuan saya membuat program ini supaya allah tambah-tambahkan ilmu yang sudah allah kasih kepada saya wasilah guru-guru saya, dan juga saya ingin program ini bisa di ambil manfaat oleh orang lain dan mudah-mudahan itu menjadi amal jariyah untuk saya.
+
+ISI DARI ARTICLE PENGANTAR
+1. PENGANTAR
+2. DEFINISI FALAK & HISAB
+3. HUKUM MENGKAJI ILMU HISAB
+4. PEMBAGIAN HISAB
+
+ANAK CABANG DARI PENJELASAN HISAB
+1. PENDAHULUAN
+2. HARI
+3. HISAB ORANG JAWA
+4. TAHUN HIJRIYAH
+5. KABISAH & BASITOH HIJRIYAH
+6. HARI MASUK TAHUN HIJRIYAH
+7. HARI MASUK BULAN HIJRIYAH
+8. TAHUN MASEHI 
+9. KABISAH BASITOH MASEHI
+10. HARI MASUK TAHUN MASEHI
+11. HARI MASUK BULAN MASEHI
+12. KONVERSI HIJRI KE MASEHI
+
+
+ringkaskan script di bawah ini
+
+let {bulanYangDimaksud, tahunYangDimaksud, jatuhhari, mq2, tHm, tjdIjt, yaqoulijtima, jmsiz2, jmsiz4, jmsig2, jmsig4, yaqoulijtima2, 
+    jmipa2, jmipa4, ptkimkan, ikngoerikn, jmmks2, jmmks4, mq3, mq3a, qnh2, qnh4 } = hisabBulanHijriyah(parseInt(taqwiembulan));

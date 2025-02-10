@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>...</title>
+   <!-- talwind -->
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+     <!-- link anime -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- berkas style css -->
+    <link href="b navbar.css" rel="stylesheet" />
+    <link href="article-taqwiem.css" rel="stylesheet" />
+    <link href="style-footer.css" rel="stylesheet" />
+
+    <!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+<style>
+form, #hitung {
+  margin-top: 10px;
+  background: var(--button-hitung); /*rgb(239 68 68)*/
+  width: 35%;
+  color: #F0F6FC;
+  border-width: 0px;
+  padding-top: 0.2rem; 
+  padding-bottom: 0.2rem;
+  border-radius: 0.25rem; 
+  font-size: 0.800rem; 
+  line-height: 1.75rem; 
+  border: none;
+  transition: 0.2s;
+  border-color: red;
+}
+form, #hitung:hover {
+    background-color: var(--button-hitung-hover);
+    transform: scale(1.01);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+form, #hitung:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+#kurang, #tambah {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 2px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #kurang:hover {
+        background-color: #0056b3;
+    }
+    #tambah:hover {
+        background-color: #0056b3;
+    }
+
+    /* Styling for input fields and labels */
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 10px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Styling for the container of the input fields */
+    article.all-articel {
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+  <!-- bagian navbar -->
+   <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">F169</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">F169</span>
+          <i class='bx bx-x' ></i>
+        </div>
+                   
+        <ul class="links">
+          <li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white;"></i></li> 
+          <li class="li-nav"><a href="index.html">HOME</a></li>
+          <li class="li-nav"><a href="taqwiem.html">TAQWIEM</a></li>
+          <li class="li-nav">
+            <a href="">HISAB ISTILAHI</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="li-nav"><a href="perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+              <li class="li-nav"><a href="perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+            </ul>
+          </li>
+          <li class="li-nav">
+            <a href="">PENJELASAN HISAB</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li class="li-nav"><a href="pendahuluan.html">Pendahuluan</a></li>
+              <li class="li-nav"><a href="khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                            <li class="more">
+                <span><a href="#">Penjelasan Taqwiem</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li class="li-nav"><a href="taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab2.html">Taqwiem Bab 2</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="li-nav"><a href="tentang.html">TENTANG</a></li>
+          <li class="li-nav"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+              <form role="search" id="form">
+          <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content"> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>        
+ <div class="jarak"></div>
+     
+  <article class="all-articel">
+       <h1 class="h1-judul">Kalkulator Waris</h1>
+       <p class="pTglPembuatan">A. Ghofur Jan 18, 2024  9 Menit Dilihat</p>
+       </article>
+
+      <article class="all-articel">
+        <h2 class="h1-articell"></h2>
+        <label for="jumlahHarta">Jumlah Harta Waris:</label>
+        <input type="number" id="jumlahHarta" name="jumlahHarta" min="0" step="0.01">
+        <br>
+        <label for="tanggungan">Tanggungan:</label>
+        <input type="number" id="tanggungan" name="tanggungan" min="0" step="0.01">
+      </article>
+       <article class="all-articel" id="all-articel"> 
+        <h2 class="h1-articell">Mayyit </h2><br>
+            <table class="table-harokat">
+              <tr class="tr-harokat">
+                <th class="th-harokat">
+                    <input type="checkbox" name="mayitLelaki" id="mayitlelaki">
+            <label for="">Laki Laki</label> 
+                </th>
+              </tr>
+              <tr class="tr-harokat">
+                <th class="th-harokat">
+                    <input type="checkbox" name="mayitPerempuan" id="mayitperempuan">
+            <label for="">Perempuan</label> 
+                </th>
+              </tr>
+             </table>
+      </article> 
+<article class="all-articel" id="all-articel"> 
+  <h2 class="h1-articell">Ahli Waris</h2>
+      <table class="table-harokat">
+        <tr class="tr-harokat">
+          <th class="th-harokat">Laki Laki</th>
+          <th class="th-harokat">Adad Ruus</th>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwarisSuami" id="ahliwarisSuami">
+            <label for="">Suami</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisCLDAL">
+            <label for="">Cucu Lelaki Dari Anak Lelaki</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisAyah">
+            <label for="">Ayah</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisAL">
+            <label for="">Anak Lelaki</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisKDA">
+            <label for="">Kakek Dari Ayah</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisSLSK">
+            <label for="">Saudara Lelaki Sekandung</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisSLSLB">
+            <label for="">Saudar Lelaki Sebapak</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisSLSI">
+            <label for="">Saudara Lelaki Seibu</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisKLSK">
+            <label for="">Keponakan Lelaki Sekandung</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisKLSB">
+            <label for="">Keponakan Lelaki Sebapak</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisPSK">
+            <label for="">Paman Sekandung</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisPSB">
+            <label for="">Paman Sebapak</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisSLDPSK">
+            <label for="">Sepupu Lelaki Dari Paman Sekandung</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+        <tr class="tr-harokat">
+          <td class="td-harokat">
+            <input type="checkbox" name="ahliwaris" id="ahliwarisSLDYSA">
+            <label for="">Sepupu Lelaki Dari Yang Seayah</label> 
+          </td>
+          <td class="td-harokat">
+            <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+          </td>
+        </tr>
+       </table>
+</article> 
+<article class="all-articel" id="all-articel"> 
+    <h2 class="h1-articell">Ahli Waris</h2>
+      <table class="table-harokat">
+        <tr class="tr-harokat">
+            <th class="th-harokat">Perempuan</th>
+            <th class="th-harokat">Jumlah</th>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwarisIstri" id="ahliwarisIstri">
+              <label for="">Istri</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisAP">
+              <label for="">Anak Perempuan</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisCPDAL">
+              <label for="">Cucu Perempuan Dari Anak Lelaki</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisIbu">
+              <label for="">Ibu</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisNDI">
+              <label for="">Nenek Dari Ibu</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisNDB">
+              <label for="">Nenek Dari Bapak</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisSPSK">
+              <label for="">Saudara Perempuan Sekandung</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisSPSB">
+              <label for="">Saudara Perempuan Sebapak</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          <tr class="tr-harokat">
+            <td class="td-harokat">
+              <input type="checkbox" name="ahliwaris" id="ahliwarisSPSI">
+              <label for="">Saudara Perempuan Seibu</label> 
+            </td>
+            <td class="td-harokat">
+              <button id="kurang"> &minus;</button> <span>0</span> <button id="tambah">&plus;</button>
+            </td>
+          </tr>
+          
+      </table>
+      <button type="submit" id="hitung">Hitung</button>
+</article> 
+<article class="all-articel">
+  <p class="p-articel" id="hasilHitungan"></p>
+</article>
+<!--Scroll Keatas-->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i> </button>
+
+ <a href="" class="previous">&laquo; Sebelumnya</a>
+ <a href="taqwiem-bab2.html" class="next">Selanjutnya &raquo;</a>
+  
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4> contact </h4>
+  	 			<p class="p-information"><i class="fas fa-map-marker-alt"></i> Tangerang, Banten</p>
+		<p class="p-information"><i class="fas fa-phone"></i> Phone: <a class="a-information" href="tel:+6285882499758">+62 858 8249 9758</a></p>
+		
+            
+		<p class="p-information"><i class="fas fa-envelope"></i> Email: <a class="a-information" href="mailto:abdulghofur234234234@gmail.com">abdulghofur234.com</a></p>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4> informasi </h4>
+  	 			<ul class="ul-ft">
+  	 				<li class="li-ft"><a href="">redaksi</a></li>
+  	 				<li class="li-ft"><a href="">visi misi</a></li>
+  	 				<li class="li-ft"><a href="">disclaimer</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				
+  <div class="col-lg-4 my-3 my-lg-0">
+   <a class="btn btn-dark btn-social mx-2" href="https://youtube.com/@al_ghifari_234?si=KhUjXZOobr0CTaPQ" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100026754870707&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/abdul_ghofur234?igsh=MnFveXl4OG16bGNy" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a class="btn btn-dark btn-social mx-2" href="Hi
+https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                   
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer> 
+  
+  <script>
+    // Fungsi untuk memeriksa status checkbox mayit
+    function checkMayitStatus() {
+      const mayitLelaki = document.getElementById('mayitlelaki').checked;
+      const mayitPerempuan = document.getElementById('mayitperempuan').checked;
+      const ahliwarisCheckboxes = document.querySelectorAll('input[name="ahliwaris"]');
+      const ahliwarisSuami = document.getElementById('ahliwarisSuami');
+      const ahliwarisIstri = document.getElementById('ahliwarisIstri');
+
+      // Blokir semua checkbox ahli waris jika tidak ada mayit yang dipilih
+      if (!mayitLelaki && !mayitPerempuan) {
+        ahliwarisCheckboxes.forEach(checkbox => checkbox.disabled = true);
+        ahliwarisSuami.disabled = true;
+        ahliwarisIstri.disabled = true;
+      } else {
+        ahliwarisCheckboxes.forEach(checkbox => checkbox.disabled = false);
+        ahliwarisSuami.disabled = mayitLelaki;
+        ahliwarisIstri.disabled = mayitPerempuan;
+      }
+    }
+
+    // Fungsi untuk mengatur nilai span
+    function updateSpanValue(button, increment) {
+      const span = button.parentElement.querySelector('span');
+      let value = parseInt(span.textContent);
+
+      if (increment) {
+        value++;
+      } else {
+        value--;
+      }
+
+      span.textContent = value;
+    }
+
+    // Fungsi untuk memeriksa status checkbox ahli waris
+    function checkAhliWarisStatus() {
+      const ahliwarisCheckboxes = document.querySelectorAll('input[name="ahliwaris"], input[name="ahliwarisSuami"], input[name="ahliwarisIstri"]');
+      ahliwarisCheckboxes.forEach(checkbox => {
+        const span = checkbox.parentElement.parentElement.querySelector('span');
+        if (checkbox.checked) {
+          span.textContent = '1';
+        } else {
+          span.textContent = '0';
+        }
+      });
+    }
+
+    // Fungsi untuk menghitung dan menampilkan data ahli waris
+    function hitungAhliWaris() {
+      const mayitLelaki = document.getElementById('mayitlelaki').checked;
+      const mayitPerempuan = document.getElementById('mayitperempuan').checked;
+      const ahliwarisCheckboxes = document.querySelectorAll('input[name="ahliwaris"]');
+      const ahliwarisSuami = document.getElementById('ahliwarisSuami');
+      const ahliwarisIstri = document.getElementById('ahliwarisIstri');
+
+      if (!mayitLelaki && !mayitPerempuan) {
+        alert('Pilih salah satu jenis kelamin mayit.');
+        return;
+      }
+
+      let dataAhliWaris = '';
+      ahliwarisCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          const span = checkbox.parentElement.parentElement.querySelector('span');
+          let value = parseInt(span.textContent);
+          if (checkbox.id === 'ahliwarisCLDAL') {
+            value = 30;
+          } else if (checkbox.id === 'ahliwarisAyah') {
+            value = 24;
+          } else if (checkbox.id === 'ahliwarisAL') {
+            value = 31;
+          } else if (checkbox.id === 'ahliwarisSLSK') {
+            value = value > 1 ? 21 : 20;
+          }
+          dataAhliWaris += `${checkbox.nextElementSibling.textContent.trim()}: ${value}\n`;
+        }
+      });
+
+      if (ahliwarisSuami.checked) {
+        const span = ahliwarisSuami.parentElement.parentElement.querySelector('span');
+        dataAhliWaris += `Suami: ${span.textContent}\n`;
+      }
+
+      if (ahliwarisIstri.checked) {
+        const span = ahliwarisIstri.parentElement.parentElement.querySelector('span');
+        dataAhliWaris += `Istri: ${span.textContent}\n`;
+      }
+
+      if (dataAhliWaris === '') {
+        alert('Tidak ada ahli waris yang dipilih.');
+        return;
+      }
+
+      document.getElementById('hasilHitungan').textContent = dataAhliWaris;
+
+      // Reset nilai span dan checkbox
+      ahliwarisCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        const span = checkbox.parentElement.parentElement.querySelector('span');
+        span.textContent = '0';
+      });
+
+      ahliwarisSuami.checked = false;
+      ahliwarisIstri.checked = false;
+      ahliwarisSuami.parentElement.parentElement.querySelector('span').textContent = '0';
+      ahliwarisIstri.parentElement.parentElement.querySelector('span').textContent = '0';
+    }
+
+    // Event listener untuk tombol tambah dan kurang
+    document.querySelectorAll('#tambah').forEach(button => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const checkbox = button.parentElement.parentElement.querySelector('input[type="checkbox"]');
+        const span = button.parentElement.querySelector('span');
+        const id = checkbox.id;
+
+        if (checkbox.checked) {
+          if ((id === 'ahliwarisSuami' || id === 'ahliwarisAyah' || id === 'ahliwarisIbu' || id === 'ahliwarisKDA' || id === 'ahliwarisNDI' || id === 'ahliwarisNDB') && parseInt(span.textContent) < 1) {
+            updateSpanValue(button, true);
+          } else if (id === 'ahliwarisIstri' && parseInt(span.textContent) < 4) {
+            updateSpanValue(button, true);
+          } else if (id !== 'ahliwarisSuami' && id !== 'ahliwarisAyah' && id !== 'ahliwarisIbu' && id !== 'ahliwarisIstri' && id !== 'ahliwarisKDA' && id !== 'ahliwarisNDI' && id !== 'ahliwarisNDB') {
+            updateSpanValue(button, true);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('#kurang').forEach(button => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const checkbox = button.parentElement.parentElement.querySelector('input[type="checkbox"]');
+        const span = button.parentElement.querySelector('span');
+
+        if (checkbox.checked && parseInt(span.textContent) > 1) {
+          updateSpanValue(button, false);
+        }
+      });
+    });
+
+    // Event listener untuk tombol hitung
+    document.getElementById('hitung').addEventListener('click', hitungAhliWaris);
+
+    // Event listener untuk checkbox mayit
+    document.getElementById('mayitlelaki').addEventListener('change', checkMayitStatus);
+    document.getElementById('mayitperempuan').addEventListener('change', checkMayitStatus);
+
+    // Event listener untuk checkbox ahli waris
+    document.querySelectorAll('input[name="ahliwaris"], input[name="ahliwarisSuami"], input[name="ahliwarisIstri"]').forEach(checkbox => {
+      checkbox.addEventListener('change', checkAhliWarisStatus);
+    });
+  </script>
+
+ <p>  </p>
+                    <!-- dark mode -->
+<script>
+  const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+
+</script>
+        <!-- Anime AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js">
+</script>
+<script>
+    AOS.init({
+      once: true,
+    });
+</script>
+        <!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+<script src="scripts.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+                    <!-- js file -->
+<script src="navbar.js"></script>
+<script src="scrolltop.js"></script>
+         
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title></title>
+  <!--tmplt style from link https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="style-footer.css"/>
+    <link rel="stylesheet" href="article-taqwiem.css"/>
+    <style>
+      .kotakinput {
+  color: var(--color-input);
+}
+.w-f {
+  width: 152px;
+}
+.custom-select {
+  position: relative;
+  font-family: bold;
+}
+.custom-select select {
+  display: none; /*sembunyikan elemen SELECT asli: */
+}
+.select-selected {
+  background-color: var(--bkg-select-selected);
+  margin-top: 10px;
+}
+/* Style panah di dalam elemen pilih: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--select-selected-after-bdr-color) transparent transparent transparent;
+}
+/* Arahkan panah ke atas saat kotak pilih terbuka (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--select-selected-after-bdr-color) transparent;
+  top: 7px;
+}
+
+/* style item (opsi), termasuk item yang dipilih: */
+.select-items div,.select-selected {
+  color: #cee;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style item (opsi): */
+.select-items {
+  position: absolute;
+  background-color: var(--bkg-select-selected);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/* Sembunyikan item ketika kotak pilih ditutup: */
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button-hs {
+  margin-top: 10px;
+  background: var(--button-hs); /*rgb(239 68 68)*/
+  width: 35%;
+  color: #F0F6FC;
+  border-width: 0px;
+  padding-top: 0.2rem; 
+  padding-bottom: 0.2rem;
+  border-radius: 0.25rem; 
+  font-size: 0.800rem; 
+  line-height: 1.75rem; 
+  border: none;
+  transition: 0.2s;
+}
+.button-hs:hover {
+    background-color: var(--button-hs-hover);
+    transform: scale(1.01);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.button-hs:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media only screen and (max-width: 500px) {
+  .button-hs {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .button-hs {
+    width: 25%;
+  }
+}
+
+.ft {
+  padding-top: 1rem; 
+  padding-bottom: 1rem;
+}
+.ft {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.all-articel > .h1-articel, .articel {
+  margin-left: 9px;
+  padding-top: 30px;
+}
+
+.all-articel > .h2-articel, .p-articel {
+  margin: 10px;
+  font-size: 90%;
+}
+  body{font-family:'Roboto',Arial,sans-serif}.none{display:none}
+#numthn {
+  width: 50px;
+}
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" crossorigin="anonymous"/>
+
+<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+     
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+   <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">F169</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">F169</span>
+          <i class='bx bx-x' ></i>
+        </div>
+                   
+        <ul class="links">
+          <li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white;"></i></li> 
+          <li class="li-nav"><a href="index.html">HOME</a></li>
+          <li class="li-nav"><a href="taqwiem.html">TAQWIEM</a></li>
+          <li class="li-nav">
+            <a href="">HISAB ISTILAHI</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="li-nav"><a href="perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+              <li class="li-nav"><a href="perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+            </ul>
+          </li>
+          <li class="li-nav">
+            <a href="">PENJELASAN HISAB</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li class="li-nav"><a href="pendahuluan.html">Pendahuluan</a></li>
+              <li class="li-nav"><a href="khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                            <li class="more">
+                <span><a href="#">Penjelasan Taqwiem</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li class="li-nav"><a href="taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab2.html">Taqwiem Bab 2</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="li-nav"><a href="tentang.html">TENTANG</a></li>
+          <li class="li-nav"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+              <form role="search" id="form">
+          <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content"> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>        
+  
+  
+  
+     <div class="container px-5 py-40 mx-auto"> 
+    <div class="flex flex-col text-center w-full mb-12"> 
+    <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">
+              KALKULATOR HARI
+            </h1> 
+
+<p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold">
+     Perhitungan Hisab Sullamun Nayirain Bulan Hijriyah
+            </p>
+            </div>
+  <div class="lg:w-1/3 w-full mx-auto px-8">  
+    <div class="relative flex-grow w-full"> 
+      <form action="/action_page.php">
+       <label for="cars">Kalkulator Hijri</label><br>
+         <select name="cars" id="cars">
+           <option value="0">Tanggal</option>
+           <option value="1">1</option>
+           <option value="1">2</option>
+           <option value="1">3</option>
+           <option value="1">4</option>
+           <option value="1">5</option>
+           <option value="1">6</option>
+           <option value="1">7</option>
+           <option value="1">2</option>
+           <option value="1">1</option>
+           <option value="1">2</option>
+           <option value="1">1</option>
+           <option value="1">2</option>
+         </select>
+         <select name="cars" id="bulanMasehi">
+          <option value="0">Bulan</option>
+          <option value="1">Januari</option>
+          <option value="2">Februari</option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+         </select>
+         <select name="cars" id="tahunMasehi">
+          <option value="0">Tahun</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+         </select>
+         
+      </form>
+   </select>  
+  </div>
+  <button type="button" value="Hitung" onclick="calculate1()"
+      class="button-hs">HASIL
+  </button>
+       <!--mt-4 w-full text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg w-f
+        <!-- Hitung -->
+       
+  <button type="button" value="Hitung" onclick="calculate2()" class="button-hs">HITUNG
+  </button>
+    </form>
+           </div>
+        </div>
+     </div>
+          <article class="all-articel">
+      <p class="p-hasil" id="showdata"></p>       
+      </article>
+  <article class="all-articel">
+  <h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90"></h1>
+  <p class="p-articel"></p>
+    <p class="p-articel"></p>
+  </article>        
+
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4> contact </h4>
+  	 			<p class="p-information"><i class="fas fa-map-marker-alt"></i> Tangerang, Banten</p>
+		<p class="p-information"><i class="fas fa-phone"></i> Phone: <a class="a-information" href="tel:+6285882499758">+62 858 8249 9758</a></p>
+		
+            
+		<p class="p-information"><i class="fas fa-envelope"></i> Email: <a class="a-information" href="mailto:abdulghofur234234234@gmail.com">abdulghofur234.com</a></p>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4> informasi </h4>
+  	 			<ul class="ul-ft">
+  	 				<li class="li-ft"><a href="">redaksi</a></li>
+  	 				<li class="li-ft"><a href="">visi misi</a></li>
+  	 				<li class="li-ft"><a href="">disclaimer</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				
+  <div class="col-lg-4 my-3 my-lg-0">
+   <a class="btn btn-dark btn-social mx-2" href="https://youtube.com/@al_ghifari_234?si=KhUjXZOobr0CTaPQ" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100026754870707&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/abdul_ghofur234?igsh=MnFveXl4OG16bGNy" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a class="btn btn-dark btn-social mx-2" href="Hi
+https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                   
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer> 
+  
+  
+<script>
+  const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+
+</script>
+<script>
+  var x, i, j, l, ll, selElmnt, a, b, c;
+/* Cari elemen apa pun dengan class "custom-select": */
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /* Untuk setiap elemen, buat DIV baru yang akan bertindak sebagai item yang dipilih: */
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /* Untuk setiap elemen, buat DIV baru yang berisi daftar opsi: */
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /* Saat item diklik, perbarui kotak pilih asli,
+        dan item yang dipilih: */
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+    /* Ketika kotak pilih diklik, tutup kotak pilih lainnya,
+    dan buka/tutup kotak pilih saat ini: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* Sebuah fungsi yang akan menutup semua kotak pilihan di dokumen, kecuali kotak pilih saat ini: */
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+</script>
+
+<script>
+   const calculate2 = () => { 
+  let tahunMasehi = document.querySelector("#tahunMasehi").value; 
+  let totaltahun = parseFloat(tahunMasehi) 
+  let tahunTam = totaltahun - 1;
+  let a = tahunTam % 400;
+  let b = tahunTam % 100;
+  let c = tahunTam % 4; let dx = tahunTam /400;
+  let d = Math.trunc(dx) *7; let ex = a /100;
+  let e = Math.trunc(ex) *5; let fx = b /4;
+  let f = Math.trunc(fx) *5;
+  let g = c + 2;
+  let h = d + e + f + g; 
+  let i = h % 7;
+  if (i == 0) {hmn = "Sabtu";} 
+  else if (i == 1) {hmn = "Minggu";} 
+  else if (i == 2) {hmn = "Senin";} 
+  else if (i == 3) {hmn = "Selasa";} 
+  else if (i == 4) {hmn = "Rabu";} 
+  else if (i == 5) {hmn = "Kamis";} 
+  else if (i == 6) {hmn = "Jumat";} 
+  else if (i == 7) {hmn = "Sabtu";}
+  let jx = tahunTam / 400; 
+  let j = Math.trunc(jx) *2;
+  let k = Math.trunc(ex) *4; let lx = b /4;
+  let l = Math.trunc(lx);
+  let m = c * 5;
+  let n = j +k +l +m +2;
+  let o = n % 5;
+  if (o == 0) {hmp = "Kliwon";}
+  else if (o == 1) {hmp = "Legi";}
+  else if (o == 2) {hmp = "Pahing";}
+  else if (o == 3) {hmp = "Pon";}
+  else if (o == 4) {hmp = "Wage";}
+  else if (o == 5) {hmp = "Kliwon";}
+  let p = totaltahun % 400;
+  let q = totaltahun % 100;
+  let r = totaltahun % 4;
+  if (p == 0) {btP = "(Bisa dibagi)";} 
+  else {btP = "(Tidak bisa dibagi)";}
+  if (q == 0) {btQ = "(Bisa dibagi)";} 
+  else {btQ = "(Tidak bisa dibagi)";}
+  if (r == 0) {btR = "(Bisa dibagi)";} 
+  else {btR = "(Tidak bisa dibagi)";}
+  if ((totaltahun %100!=0) && (totaltahun %4==0) || (totaltahun %400==0)){kabisahBasitoh = "Tahun Kabisah (Feb 29)";}
+  else{kabisahBasitoh = "Tahun Basitoh (Feb 28)";}
+  let bulanMasehi = document.querySelector("#bulanMasehi").value;        
+        
+  
+   // check apakah sudah memasukan inputan tahun atau belum?
+   // jika belum, maka "Harap masukan tahun"
+  if (tahunMasehi == "") { 
+  	document.querySelector("#showdata").innerHTML 
+ 		= "Mohon maaf, harap masukan tahun !"; 
+   } 
+	// jika sudah, keluarkan hasil
+  	 else { 
+  	document.querySelector( 
+  		"#showdata"
+  	).innerHTML = 
+ 		` 
+ 	<table class="table-harokat">
+ 		<tr class="tr-harokat">
+ 	   	<th class="th-harokat">Nama</th>
+ 	    	<th class="th-harokat"></th>
+ 	    	<th class="th-harokat">Hasil</th>
+ 	      	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">Tahun</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${totaltahun} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">Tahun Tam</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${tahunTam} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">A</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${a} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">B</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${b} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">C</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${c} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">D</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${d} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">E</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${e} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">F</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${f} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">G</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${g} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">H</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${h} </td>
+ 	         	</tr>
+ 		<tr class="tr-harokat">
+ 		  <td class="td-harokat">I</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${i} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">Hari Masuk Nasional</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${hmn} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">J</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${j} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">K</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${k} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">L</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${l} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">M</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${m} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">N</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${n} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">O</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${o} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">Hari Masuk Pasaran</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${hmp} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">P /400</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${p} ${btP} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">Q /100</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${q} ${btQ} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">R /4</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${r} ${btR} </td>
+ 	         	</tr>
+ 		  <td class="td-harokat">TKB</td>
+        <td class="td-harokat"></td>
+          <td class="td-harokat"> ${kabisahBasitoh} </td>
+ 	         	</tr>
+ 	 		</table>
+	  `; 
+ 	} 
+  }; 
+</script>
+      <script src="navbar.js"></script>
+
+      <script src="scrolltop.js"></script>
+  </body>
+  </html>

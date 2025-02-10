@@ -1,0 +1,17 @@
+.kotakinput{color: var(--color-input);} .w-f { width: 152px;}.custom-select {position: relative;font-family: bold;}.custom-select select { display: none;}
+.select-selected {background-color: var(--bkg-select-selected);margin-top: 10px;}.select-selected:after {position: absolute; content: "";top: 14px;right: 10px;width: 0;height: 0;border: 6px solid transparent;border-color: var(--select-selected-after-bdr-color) transparent transparent transparent;}
+.select-selected.select-arrow-active:after {border-color: transparent transparent var(--select-selected-after-bdr-color) transparent;top: 7px;}
+.select-items div,.select-selected {color: #cee;padding: 8px 16px;border: 1px solid transparent;border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;cursor: pointer;}
+.select-items {position: absolute;background-color: var(--bkg-select-selected);top: 100%;left: 0;right: 0;z-index: 99;}
+.select-hide {display: none;}.select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.1);}
+.button-hs {margin-top: 10px;background: var(--button-hs);width: 35%;color: #F0F6FC;border-width: 0px;padding-top: 0.2rem; padding-bottom: 0.2rem;border-radius: 0.25rem; font-size: 0.800rem; line-height: 1.75rem; border: none;transition: 0.2s;}
+.button-hs:hover {background-color: var(--button-hs-hover);transform: scale(1.01);transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;}
+.button-hs:focus {outline: 2px solid transparent;outline-offset: 2px;} @media only screen and (max-width: 500px) {.button-hs {width: 30%;}}@media only screen and (max-width: 400px) {.button-hs {width: 25%;}}
+.ft {padding-top: 1rem; padding-bottom: 1rem;}.ft {left: 0;bottom: 0;width: 100%;background-color: red;color: white;text-align: center;margin-top: 50px;}
+.all-articel > .h1-articel, .articel {margin-left: 9px;padding-top: 30px;}.all-articel > .h2-articel, .p-articel {margin: 10px;font-size: 90%;}
+body{font-family:'Roboto',Arial,sans-serif}.none{display:none}form.whatsapp-form {box-shadow: 0 1px 6px rgba(32,33,36,.28); border-radius: .5rem; padding: 20px;box-sizing: border-box;color: #444;font-size: 14px;line-height: 1.5;}
+.whatsapp-form a.send_form {color: #fff;background: #21a51f;text-decoration: none;display: inline-block;padding: 10px 25px;border-radius: .3rem;font-weight: 700;letter-spacing: .5px;font-size: 15px;}
+#text-info span {display: block;padding: 10px 15px;text-align: center;font-weight: 700;margin: 15px 0;border-radius: .5rem;}
+#text-info span.yes {background: #c6ffc5;color: #0ea904;}#text-info span.no {background: #ffc5c5;color: #ce0404;}.whatsapp-form{width:100%;max-width:700px;margin:0 auto;box-sizing:border-box;}
+
+

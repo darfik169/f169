@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Menghitung bulan hijriyah menggunakan metode hisab istilahi yang memakai metode kitab sullamun nayyiraini">
+  <meta name="keywords" content="menghitung bulan hijriyah, hisab istilahi, hisab taqribi, ilmu falak, ilmu hisab , f169">
+  <title>Hisab Istilahi Perhitungan Tahun Hijriyah</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../style/navbar.css"/>
+    <link rel="stylesheet" href="../style/hasil.css"/>
+    <link rel="stylesheet" href="../style/style-footer.css"/>
+    <link rel="stylesheet" href="../style/article-taqwiem.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <nav>
+    <div class="navbar"><i class='bx bx-menu'></i><div class="logo"><a href="#">F169</a></div><div class="nav-links"> <div class="sidebar-logo">
+          <span class="logo-name">F169</span><i class='bx bx-x' ></i></div><ul class="links"><li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white;"></i></li> 
+          <li class="li-nav"><a href="index.html">HOME</a></li> <li class="li-nav"><a href="taqwiem.html">TAQWIEM</a></li><li class="li-nav"><a href="">HISAB ISTILAHI</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="li-nav"><a href="perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+              <li class="li-nav"><a href="perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+            </ul>
+          </li>
+          <li class="li-nav">
+            <a href="">PENJELASAN HISAB</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li class="li-nav"><a href="pendahuluan.html">Pendahuluan</a></li>
+              <li class="li-nav"><a href="khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                            <li class="more">
+                <span><a href="#">Penjelasan Taqwiem</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li class="li-nav"><a href="taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab2.html">Taqwiem Bab 2</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                  <li class="li-nav"><a href="taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="li-nav"><a href="tentang.html">TENTANG</a></li>
+          <li class="li-nav"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+              <form role="search" id="form">
+          <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content"> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>        
+  <div class="container px-5 py-40 mx-auto">  <div class="flex flex-col text-center w-full mb-12">  <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90"> HISAB ISTILAHI </h1> 
+<p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold">  PERHITUNGAN AWAL TAHUN HIJRI</p></div> <div class="lg:w-1/3 w-full mx-auto px-8"> <div class="relative flex-grow w-full"> </div>
+      <label for="full-name" class="leading-7 text-sm text-gray-600"> Masukan Tahun *</label>  <input type="number" name="name" placeholder="169" id="tahun"  class="kotakinput w-full bg-white bg-opacity-10 rounded border border-gray-300 focus:border-blue-500 focus:bg-transparent focus:ring-2 focus:ring-white-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" recuired/>
+      <button type="button" value="Hasil" onclick="calculate1()" class="button-hs" > HASIL</button><button type="button" value="Hitung" onclick="calculate2()" class="button-hs" > HITUNG</button></div></div><article class="all-articel">
+      <p class="p-hasil" id="showdata"></p></article><article class="all-articel"><h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Hisab Istilahi</h1><p class="p-articel">Pengertian Hisab Istilahi atau bisa disebut juga Sebagai Hisab Urfi. Sebelumnya, dalam implementasi siklus pergerakan bulan mengelilingi matahari mengacu pada dua sitem hisab yang terkenal yakni hisab istilahi dan hisab haqiqi, sistem perhitungan hisab haqiqi terbagi menjadi tiga bagian yakni hisab taqribi haqiqie, hisab tahqiqie haqiqie dan hisab kontomporer. jika anda ingin mengetahui lebih lanjut, silahkan klik <a href="pendahuluan.html" class="a-link-web">disini</a> </p><p class="p-articel"></p></article>        
+<footer class="footer"><div class="container"><div class="row">	<div class="footer-col"><h4> contact </h4><p class="p-information"><i class="fas fa-map-marker-alt"></i> Tangerang, Banten</p><p class="p-information"><i class="fas fa-phone"></i> Phone: <a class="a-information" href="tel:+6285882499758">+62 858 8249 9758</a></p>    
+		<p class="p-information"><i class="fas fa-envelope"></i> Email: <a class="a-information" href="mailto:abdulghofur234234234@gmail.com">abdulghofur234.com</a></p>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4> informasi </h4>
+  	 			<ul class="ul-ft">
+  	 				<li class="li-ft"><a href="">redaksi</a></li>
+  	 				<li class="li-ft"><a href="">visi misi</a></li>
+  	 				<li class="li-ft"><a href="">disclaimer</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				
+  <div class="col-lg-4 my-3 my-lg-0">
+   <a class="btn btn-dark btn-social mx-2" href="https://youtube.com/@al_ghifari_234?si=KhUjXZOobr0CTaPQ" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100026754870707&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+   <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/abdul_ghofur234?igsh=MnFveXl4OG16bGNy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a class="btn btn-dark btn-social mx-2" href="https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                   
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer> 
+  
+  
+<script>
+const btn = document.querySelector(".btn-toggle"); 
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = localStorage.getItem("theme");
+
+// Atur tema berdasarkan preferensi atau penyimpanan
+document.body.classList.add(currentTheme || (prefersDarkScheme.matches ? "dark-theme" : "light-theme"));
+
+btn.addEventListener("click", () => {
+  const isDarkMode = document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("light-theme", !isDarkMode);
+  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
+</script>
+
+<script>
+const hitungDataTahun = (tahun) => {
+  let hasil = tahun % 8; let thn = hasil;
+  const grades = ["Baa", "Wawu", "Jim Awal", "Alip", "Haa", "Jim Akhir", "Zai", "Dal"];
+  let grade = grades[thn];
+  let tahuntam = tahun - 1;
+  let bB = Math.trunc(tahuntam / 30);
+  let cC = tahuntam % 30;
+  let gradeskabisah = ["11", "0", "1", "1", "1", "2", "2", "3", "3", "3", "4", "4", "4", "5", "5", "5", "6", "6", "7", "7", "7", "8", "8", "8", "9", "9", "10", "10", "10", "11"][cC];
+  let gradesbasitoh = ["19", "1", "1", "2", "3", "3", "4", "4", "5", "6", "6", "7", "8", "8", "9", "10", "10", "11", "11", "12", "13", "13", "14", "15", "15", "16", "16", "17", "18", "18"][cC];
+  let dD = bB * 5;
+  let eE = parseInt(gradeskabisah) * 5;
+  let fF = parseInt(gradesbasitoh) * 4;
+  let gG = dD + eE + fF + 5;
+  let hH = gG % 7;
+  let hmth = ["Sabtu", "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at"][hH];
+  let iI = bB + fF;
+  let jJ = iI % 5;
+  let hmp = ["Kliwon", "Legi", "Pahing", "Pon", "Wage"][jJ];
+
+  let kbbsValues = [
+    "Basitoh", "Basitoh", "Kabisah", "Basitoh", "Basitoh", "Kabisah",
+    "Basitoh", "Kabisah", "Basitoh", "Basitoh", "Kabisah", "Basitoh",
+    "Basitoh", "Kabisah", "Basitoh", "Kabisah", "Basitoh", "Basitoh",
+    "Kabisah", "Basitoh", "Basitoh", "Kabisah", "Basitoh", "Basitoh",
+    "Kabisah", "Basitoh", "Kabisah", "Basitoh", "Basitoh", "Kabisah", "Basitoh"
+  ];
+  let kbbs = kbbsValues[tahun % 30];
+  if (kbbs == "Kabisah") {uBln = "30";
+} else {uBln = "29";}
+
+  return { tahun, hasil, grade, tahuntam, bB, cC, gradeskabisah, gradesbasitoh, iI, jJ, hH, hmth, hmp, kbbs };
+};
+
+const calculate1 = () => {
+  let tahun = document.querySelector("#tahun").value;
+  if (!tahun) {
+    document.querySelector("#showdata").innerHTML = "Mohon maaf, harap masukan tahun!";
+    return;
+  }
+
+  let { hasil, grade, tahuntam, bB, cC, gradeskabisah, gradesbasitoh, hH, hmth, iI, jJ, hmp, kbbs } = hitungDataTahun(parseInt(tahun));
+  let days = ["Sabtu", "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+  let hHBase = hH % 7; 
+  let days2 = ["Kliwon", "Legi", "Pahing", "Pon", "Wage"];
+  let hHBase2 = jJ % 5; 
+
+  let soparN = days[(hHBase + 2) % 7];
+  let robiulAwalN = days[(hHBase + 3) % 7];
+  let robiusStaniN = days[(hHBase + 5) % 7];
+  let jumadilAwalN = days[(hHBase + 6) % 7];
+  let jumadisStaniN = days[(hHBase + 1) % 7];
+  let rojabN = days[(hHBase + 2) % 7];
+  let syabanN = days[(hHBase + 4) % 7];
+  let romadhonN = days[(hHBase + 5) % 7];
+  let syawalN = days[hHBase]; 
+  let dzulQodahN = days[(hHBase + 1) % 7];
+  let dzulHijjahN = days[(hHBase + 3) % 7];
+
+  let robiulAwalandStani = days2[(hHBase2 + 4) % 5];
+  let jumadilAwalandStani = days2[(hHBase2 + 3) % 5];
+  let rojabandSyaban = days2[(hHBase2 + 2) % 5];
+  let romadhonandSyawal = days2[(hHBase2 + 1) % 5];
+
+
+  document.querySelector("#showdata").innerHTML = `
+ 		<table class="table-harokat">
+ 	   	<tr class="tr-harokat">
+ 	      	<th class="th-harokat">Bulan</th>
+ 	        	<th class="th-harokat">H.NSL</th>
+ 	          	<th class="th-harokat">H.PSN</th>
+ 		            <th class="th-harokat">U.Bln</th></tr>
+  	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Muharom</td>
+ 	                    <td class="td-harokat"> ${hmth}</td>
+ 	                      <td class="td-harokat"> ${hmp}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>
+   	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Sopar</td>
+ 	                    <td class="td-harokat"> ${soparN}</td>
+ 	                      <td class="td-harokat"> ${hmp}</td>
+ 	                        <td class="td-harokat"> 29</td></tr>
+  	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Robiul Awal</td>
+ 	                    <td class="td-harokat"> ${robiulAwalN}</td>
+ 	                      <td class="td-harokat"> ${robiulAwalandStani}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Robius Stani</td>
+ 	                    <td class="td-harokat"> ${robiusStaniN}</td>
+ 	                      <td class="td-harokat"> ${robiulAwalandStani}</td>
+ 	                        <td class="td-harokat"> 29</td></tr>   
+   	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Jumadil Awal</td>
+ 	                    <td class="td-harokat"> ${jumadilAwalN}</td>
+ 	                      <td class="td-harokat"> ${jumadilAwalandStani}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>                                                                                               
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Jumadis Stani</td>
+ 	                    <td class="td-harokat"> ${jumadisStaniN}</td>
+ 	                      <td class="td-harokat"> ${jumadilAwalandStani}</td>
+ 	                        <td class="td-harokat"> 29</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Rojab</td>
+ 	                    <td class="td-harokat"> ${rojabN}</td>
+ 	                      <td class="td-harokat"> ${rojabandSyaban}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Syaban</td>
+ 	                    <td class="td-harokat"> ${syabanN}</td>
+ 	                      <td class="td-harokat"> ${rojabandSyaban}</td>
+ 	                        <td class="td-harokat"> 29</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Romadhon</td>
+ 	                    <td class="td-harokat"> ${romadhonN}</td>
+ 	                      <td class="td-harokat"> ${romadhonandSyawal}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Syawal</td>
+ 	                    <td class="td-harokat"> ${syawalN}</td>
+ 	                      <td class="td-harokat"> ${romadhonandSyawal}</td>
+ 	                        <td class="td-harokat"> 30</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Dzul-Qo'dah</td>
+ 	                    <td class="td-harokat"> ${dzulQodahN}</td>
+ 	                      <td class="td-harokat"> ${hmp}</td>
+ 	                        <td class="td-harokat"> 29</td></tr>
+ 	              	<tr class="tr-harokat">
+ 	                  <td class="td-harokat">Dzul-Hijjah</td>
+ 	                    <td class="td-harokat"> ${dzulHijjahN}</td>
+ 	                      <td class="td-harokat"> ${hmp}</td>
+ 	                        <td class="td-harokat"> ${uBln}</td></tr>
+    </table>
+
+  `;
+};
+const calculate2 = () => {
+  let tahun = document.querySelector("#tahun").value;
+  if (!tahun) {
+    document.querySelector("#showdata").innerHTML = "Mohon maaf, harap masukan tahun!";
+    return;
+  }
+  let { hasil, grade, tahuntam, bB, cC, gradeskabisah, gradesbasitoh, hmth, hmp, kbbs } = hitungDataTahun(parseInt(tahun));
+  document.querySelector("#showdata").innerHTML = `
+    <table class="table-harokat">
+      <tr class="tr-harokat"><th class="th-harokat">Nama</th><th class="th-harokat">Hasil</th></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Tahun</td><td class="td-harokat">${tahun}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">A</td><td class="td-harokat">${hasil}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Tahun Jawa</td><td class="td-harokat">${grade}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Tahun Tam</td><td class="td-harokat">${tahuntam}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">B</td><td class="td-harokat">${bB}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">C</td><td class="td-harokat">${cC}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Kabisah</td><td class="td-harokat">${gradeskabisah}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Basitoh</td><td class="td-harokat">${gradesbasitoh}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Hari</td><td class="td-harokat">${hmth}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Pasaran</td><td class="td-harokat">${hmp}</td></tr>
+      <tr class="tr-harokat"><td class="td-harokat">Kbbs</td><td class="td-harokat">${kbbs}</td></tr>
+    </table>
+    <h1 style="margin-top:20px">Al-Hasil</h1>
+    <p>Awal Tahun ${tahun} Hijriyah jatuh Pada Hari ${hmth} , ${hmp}</p>
+  `;
+};
+</script><script src="../navbar.js"></script><script src="../selected.js"></script> <script src="../scrolltop.js"></script>
+  </body>
+  </html>

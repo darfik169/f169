@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waktu Sholat</title>
+</head>
+<body>
+    <h1>Selisih Istiwa & WIB</h1>
+    
+    <label for="longitude">Bujur (Longitude): </label><br>
+    <input type="number" id="longitude" value="107.134"><br><br>
+ 
+    <label for="perata waktu">PW (Perata Waktu) "dalam Decimal": </label><br>
+    <input type="number" id="perataWaktu" value="0.169"><br><br>
+    
+    <label for="ihtiyat">Ihtiyat (dalam menit): </label><br>
+    <input type="number" id="ihtiyat" value="2"><br><br>
+    
+    <button id="calculate">Hitung Waktu Dzuhur</button>
+    
+    <h3>Waktu Sholat:</h3>
+    <ul id="prayerTimesList">
+        <li id="selisih"></li>
+        <li id="istiwa"></li>
+        <li id="dzuhur"></li>
+    </ul>
+       <hr>
+        <h3>Rumus Casio</h3>
+        <p>Silisih : PW - ((longitude - 105) / 15) + Ihtiyat</p>
+        <p>Istiwa : Selisih + 12</p>
+        <p>Dzuhur : Istiwa + 2</p>
+    <script>
+        document.getElementById("calculate").addEventListener("click", function () {
+            const longitude = parseFloat(document.getElementById("longitude").value);
+            const ihtiyat = parseFloat(document.getElementById("ihtiyat").value);
+            const perataWaktu = parseFloat(document.getElementById("perataWaktu").value); // Perata waktu yang sudah diberikan (jam)
+            const selisihIstiwaWIB = perataWaktu - ((longitude - 105) / 15) + (ihtiyat / 60); // Rumus selisih waktu
+            const istiwaDecimal = 12 + selisihIstiwaWIB; // Waktu Istiwa dalam jam
+            const jam = Math.floor(istiwaDecimal);
+            const menit = Math.round((istiwaDecimal - jam) * 60);
+            // Format waktu Istiwa
+            const waktuIstiwa = `${jam}:${menit < 10 ? '0' : ''}${menit}`;
+            
+            // Tambahkan 2 menit untuk waktu Dzuhur
+            const dzuhurDecimal = istiwaDecimal + 2 / 60; // Menambahkan 2 menit
+            const jamDzuhur = Math.floor(dzuhurDecimal);
+            const menitDzuhur = Math.round((dzuhurDecimal - jamDzuhur) * 60);
+            const waktuDzuhur = `${jamDzuhur}:${menitDzuhur < 10 ? '0' : ''}${menitDzuhur}`;
+
+            // Tampilkan hasil
+            document.getElementById("selisih").innerText = `Selisih Istiwa & WIB: ${selisihIstiwaWIB}`;
+            document.getElementById("istiwa").innerText = `Waktu Istiwa: ${waktuIstiwa}`;
+            document.getElementById("dzuhur").innerText = `Waktu Dzuhur: ${waktuDzuhur}`;
+        });
+    </script>
+</body>
+</html>
