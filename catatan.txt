@@ -22,8 +22,3 @@ ANAK CABANG DARI PENJELASAN HISAB
 11. HARI MASUK BULAN MASEHI
 12. KONVERSI HIJRI KE MASEHI
 
-
-ringkaskan script di bawah ini
-
-let {bulanYangDimaksud, tahunYangDimaksud, jatuhhari, mq2, tHm, tjdIjt, yaqoulijtima, jmsiz2, jmsiz4, jmsig2, jmsig4, yaqoulijtima2, 
-    jmipa2, jmipa4, ptkimkan, ikngoerikn, jmmks2, jmmks4, mq3, mq3a, qnh2, qnh4 } = hisabBulanHijriyah(parseInt(taqwiembulan));
