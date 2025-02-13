@@ -2,7 +2,7 @@
   "name": "Falak Darfik 169",
   "short_name": "F169",
   "description": "F169 Adalah aplikasi web yang memberikan anda pengalaman dalam mempelajari ilmu falak atau hisab dan juga memberikan fitur perhitungan falak atau hisab untuk membandingkan perhitungan hisab kalian.",
-  "start_url": "index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#202c33",
