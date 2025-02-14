@@ -488,7 +488,7 @@ https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-pla
       const ahliwarisCheckboxes = document.querySelectorAll('input[name="ahliwaris"]');
       const ahliwarisSuami = document.getElementById('ahliwarisSuami');
       const ahliwarisIstri = document.getElementById('ahliwarisIstri');
-
+    
       if (!mayitLelaki && !mayitPerempuan) {
         alert('Pilih salah satu jenis kelamin mayit.');
         return;
@@ -549,19 +549,21 @@ https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-pla
         const checkbox = button.parentElement.parentElement.querySelector('input[type="checkbox"]');
         const span = button.parentElement.querySelector('span');
         const id = checkbox.id;
-
+        // Memastikan jumlah suami istri ayah ibu kakek nenek tidak lebih dari 1
         if (checkbox.checked) {
           if ((id === 'ahliwarisSuami' || id === 'ahliwarisAyah' || id === 'ahliwarisIbu' || id === 'ahliwarisKDA' || id === 'ahliwarisNDI' || id === 'ahliwarisNDB') && parseInt(span.textContent) < 1) {
             updateSpanValue(button, true);
+            // Memastikan jumlah istri tidak boleh lebih dari 4
           } else if (id === 'ahliwarisIstri' && parseInt(span.textContent) < 4) {
             updateSpanValue(button, true);
+          //  Jika jumlah suami istri ayah ibu kakek nenek tidak lebih dari 1 maka akan di eksekusi
           } else if (id !== 'ahliwarisSuami' && id !== 'ahliwarisAyah' && id !== 'ahliwarisIbu' && id !== 'ahliwarisIstri' && id !== 'ahliwarisKDA' && id !== 'ahliwarisNDI' && id !== 'ahliwarisNDB') {
             updateSpanValue(button, true);
           }
         }
       });
     });
-
+    // Tombol kurang tidak akan bisa di klik jika jumlah waris adalah 0 
     document.querySelectorAll('#kurang').forEach(button => {
       button.addEventListener('click', (event) => {
         event.preventDefault();
