@@ -90,7 +90,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           // Jika offline, tampilkan halaman fallback
-          return caches.match("/offline.html"); // Pastikan Anda memiliki file offline.html
+          return caches.match("offline.html"); // Pastikan Anda memiliki file offline.html
         });
     })
   );
