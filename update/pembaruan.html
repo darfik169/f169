@@ -1,49 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
-    <style>body {margin: 1%;}</style>
-</head>
-<body>
-  <nav> <div class="navbar"><i class='bx bx-menu'></i><div class="logo"><a href="">F169</a></div>
-    <div class="nav-links"><div class="sidebar-logo"> <span class="logo-name">F169</span><i class='bx bx-x' ></i></div> 
-     <ul class="links"><li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white;"></i></li><li class="li-nav"><a href="../index.html">HOME</a></li><li class="li-nav"><a href="../hitungan-hisab/taqwiem.html">TAQWIEM</a></li><li class="li-nav"><a href="">HISAB ISTILAHI</a><i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-      <ul class="htmlCss-sub-menu sub-menu"><li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li><li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li></ul></li><li class="li-nav"><a href="">PENJELASAN HISAB</a><i class='bx bxs-chevron-down js-arrow arrow '></i>
-        <ul class="js-sub-menu sub-menu"><li class="li-nav"><a href="../penjelasan-hisab/pengantar.html">Pendahuluan</a></li><li class="li-nav"><a href="../penjelasan-hisab/khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li> <li ><a href="../penjelasan-hisab/hisab-istilahi/tahun.hijriyah.html">Awal Tahun Hijriyah</a></li><li >
-          <a href="../penjelasan-hisab/hisab-istilahi/tahun-masehi.html">Awal Tahun Masehi</a></li><li class="more"><span><a href="#">Penjelasan Taqwiem</a><i class='bx bxs-chevron-right arrow more-arrow'></i></span><ul class="more-sub-menu sub-menu"><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab1.html">Taqwiem Bab 1</a></li><li class="li-nav">
-            <a href="../penjelasan-hisab/taqwiem-bab2.html">Taqwiem Bab 2</a></li><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab3.html">Taqwiem Bab 3</a></li><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab4.html">Taqwiem Bab 4</a></li></ul></li></ul></li><li class="li-nav"><a href="../footer/tentang.html">TENTANG</a></li><li class="li-nav">
-              <a href="../footer/contact.html">CONTACT</a></li></ul></div><div class="search-box"><i class='bx bx-search'></i><div class="input-box"><form role="search" id="form"><input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
-            </form>
-          </div>
-       </div>
-     </div>
-  </nav> 
-  
-  <div class="jarak"></div>
-    <div class="container">
-        <div class="content">
-            <h1>PEMBARUAN</h1>
-            <p>Halaman ini sedang dalam tahap pembaruan dan pengembangan. tetapi saya akan menampilkan beberapa halaman yang sedang dalam pembaruan ini. <br> berikut adalah beberapa halaman yang sedang dalam pembaruan: </p><br>
-            <ul class="ul-isi">
-                <li class="li-isi">Paroid. kami sedang mengembangkan perhitungan paroid, agar lebih memudahkan kalian yang ingin menghitung waris, klik link <a class="a-link-web" href="../update/hitungan-hisab/paroid.html">disini</a></li>
-                <li class="li-isi">Hisab Istilahi. Pembahasan-pembahasan seputar hisab istilahi sebagian sudah kami tuliskan dan sebagiannya lagi masih tahap penulisan. <a href="../penjelasan-hisab/hisab-istilahi/khulasoh4.html" class="a-link-web">baca disini</a></li>
-                <li class="li-isi">Perhitungan Waktu Sholat. tak luput di web ini juga sedang mengembangkan perhitungan Waktu Sholat. <a class="a-link-web" href="../hitungan-hisab/waktu-sholat.html">lihatlah disini</a></li>
-                <li class="li-isi">Al-Hasyiah Al-Martiyah <a class="a-link-web" href="../update/pustaka/alhasyiah.html">PDF</a></li>
-                <li class="li-isi">Kalkulator Sederhana</li>
-                <li class="li-isi">Pemograman EXCEL</li>
-                <li class="li-isi">DLL</li>
-            </ul>
-            <p class="p-articel">Pantau terus Website F169 ini agar bisa mengetahui pengembangan yang sudah update. </p> <br>
-            <a href="../index.html" class="a-link-web">Kembali ke Beranda</a>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <style>
+      body {
+        margin: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="">F169</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo"><span class="logo-name">F169</span><i class="bx bx-x"></i></div>
+          <ul class="links">
+            <li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white"></i></li>
+            <li class="li-nav"><a href="../index.html">HOME</a></li>
+            <li class="li-nav"><a href="../hitungan-hisab/taqwiem.html">TAQWIEM</a></li>
+            <li class="li-nav">
+              <a href="">HISAB ISTILAHI</a><i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+              </ul>
+            </li>
+            <li class="li-nav">
+              <a href="">PENJELASAN HISAB</a><i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li class="li-nav"><a href="../penjelasan-hisab/pengantar.html">Pendahuluan</a></li>
+                <li class="li-nav"><a href="../penjelasan-hisab/khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                <li><a href="../penjelasan-hisab/hisab-istilahi/tahun.hijriyah.html">Awal Tahun Hijriyah</a></li>
+                <li>
+                  <a href="../penjelasan-hisab/hisab-istilahi/tahun-masehi.html">Awal Tahun Masehi</a>
+                </li>
+                <li class="more">
+                  <span><a href="#">Penjelasan Taqwiem</a><i class="bx bxs-chevron-right arrow more-arrow"></i></span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                    <li class="li-nav">
+                      <a href="../penjelasan-hisab/taqwiem-bab2.html">Taqwiem Bab 2</a>
+                    </li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="li-nav"><a href="../footer/tentang.html">TENTANG</a></li>
+            <li class="li-nav">
+              <a href="../footer/contact.html">CONTACT</a>
+            </li>
+          </ul>
         </div>
-      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i> </button>
-      <script src="../main/main.js"></script>
-</body>
-</html>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <form role="search" id="form"><input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" /></form>
+          </div>
+        </div>
+      </div>
+    </nav>
 
+    <div class="jarak"></div>
+    <div class="container">
+      <div class="content">
+        <h1>PEMBARUAN</h1>
+        <p>Di halaman ini, kami akan memberikan informasi tentang pembaruan dan penambahan halaman yang terjadi pada website F169.</p>
+      </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../main/main.js"></script>
+  </body>
+</html>
