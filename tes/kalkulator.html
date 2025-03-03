@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Yang Baru</title>
+  <title>KLAP</title>
   <link rel="stylesheet" href="style.css">
   <meta name="theme-color" content="#007bff">
   <style>
@@ -63,7 +63,7 @@ main {
     box-shadow: 0px 0px 10px #326c9e;
 }
 .dark-mode a {
-    color: #b44444;
+    color: #a50d0d;
 }
   </style>
 </head>
@@ -78,7 +78,7 @@ main {
             <p>Di halaman ini, kami akan memberikan informasi tentang pembaruan dan penambahan halaman yang terjadi pada website F169.</p>
             <ul>
                 <li>Kalkulator</li>
-                <p>Kalkulator sederhana. <a href="../update/alat/kalkulatorF.html">Lihat</a></p>
+                <p>Kalkulator sederhana. <a href="../update">Lihat</a></p>
             </ul>
         </div>
       </div>
@@ -98,6 +98,7 @@ darkModeToggle.addEventListener("click", () => {
     }
 });
 
+// Cek mode saat halaman dimuat
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     darkModeToggle.textContent = "☀️";
