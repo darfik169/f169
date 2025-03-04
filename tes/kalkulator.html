@@ -65,6 +65,81 @@ main {
 .dark-mode a {
     color: #a50d0d;
 }
+.calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .dark-mode .calculator {
+      background: #111b21;
+      color: white;
+    }
+    .display {
+      width: 100%;
+      height: 60px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 1.5rem;
+      text-align: right;
+      box-sizing: border-box;
+    }
+    .dark-mode .display {
+      background: #113144;
+      color: white;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    button {
+      height: 60px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button.clear {
+      background: #FF4D4D;
+    }
+    button.clear:hover {
+      background: #cc0000;
+    }
+    button.equal {
+      background: #28A745;
+    }
+    button.equal:hover {
+      background: #1e7e34;
+    }
+    button.delete {
+      background: #FFC107;
+    }
+    button.delete:hover {
+      background: #d39e00;
+    }
+    .hidden {
+      display: none;
+    }
+    .samaDengan {
+        background-color: #28A745;
+    }
+    .samaDengan:hover {
+        background-color: #1e7e34;
+    }
   </style>
 </head>
 <body>
@@ -74,11 +149,47 @@ main {
   </nav>
     <main>
         <div class="container">
-            <h2>Yang Baru</h2>
-            <p>Di halaman ini, kami akan memberikan informasi tentang pembaruan dan penambahan halaman yang terjadi pada website F169.</p>
-            <ul>
-                <li>Kalkulator</li>
-                <p>Kalkulator sederhana. <a href="../update">Lihat</a></p>
+            <div class="calculator">
+                <h1>Kalkulator F169</h1>
+                <input type="text" class="display" id="display" disabled />
+                <div class="buttons" id="primary-buttons">
+                  <button onclick="pressKey('(')">(</button>
+                  <button onclick="pressKey(')')">)</button>
+                  <button onclick="pressKey('%')">%</button>
+                  <button class="delete" onclick="deleteLast()">⌫</button>
+                  <button onclick="pressKey('7')">7</button>
+                  <button onclick="pressKey('8')">8</button>
+                  <button onclick="pressKey('9')">9</button>
+                  <button onclick="pressKey('/')">÷</button>
+                  <button onclick="pressKey('4')">4</button>
+                  <button onclick="pressKey('5')">5</button>
+                  <button onclick="pressKey('6')">6</button>
+                  <button onclick="pressKey('*')">×</button>
+                  <button onclick="pressKey('1')">1</button>
+                  <button onclick="pressKey('2')">2</button>
+                  <button onclick="pressKey('3')">3</button>
+                  <button onclick="pressKey('-')">−</button>
+                  <button onclick="pressKey('0')">0</button>
+                  <button onclick="pressKey('.')">.</button>
+                  <button class="clear" onclick="clearDisplay()">C</button>
+                  <button onclick="pressKey('+')">+</button>
+                  <button onclick="toggleShift()">Shift</button>
+                  <button onclick="abs()">ABS</button>
+                  <button onclick="int()">INT</button>
+                  <button class="samaDengan" onclick="calculate()">=</button>
+                </div>
+                <div class="buttons hidden" id="shift-buttons">
+                  <button onclick="sin()">SIN</button>
+                  <button onclick="cos()">COS</button>
+                  <button onclick="tan()">TAN</button>
+                  <button onclick="asin()">SIN⁻¹</button>
+                  <button onclick="acos()">COS⁻¹</button>
+                  <button onclick="atan()">TAN⁻¹</button>
+                  <button onclick="inverse()">1/X</button>
+                  <button onclick="toggleShift()">Back</button>
+                </div>
+              </div>
+
             </ul>
         </div>
       </div>
@@ -104,5 +215,88 @@ if (localStorage.getItem("theme") === "dark") {
     darkModeToggle.textContent = "☀️";
 }
 </script>
+<script>
+    let input = "";
+
+    // Fungsi umum
+    function pressKey(key) {
+      input += key;
+      document.getElementById("display").value = input;
+    }
+
+    function clearDisplay() {
+      input = "";
+      document.getElementById("display").value = "";
+    }
+
+    function deleteLast() {
+      input = input.slice(0, -1);
+      document.getElementById("display").value = input || "0";
+    }
+
+    function calculate() {
+      try {
+        input = eval(input).toString();
+        document.getElementById("display").value = input;
+      } catch {
+        document.getElementById("display").value = "Error";
+        input = "";
+      }
+    }
+
+    // Fungsi tambahan
+    function abs() {
+      input = Math.abs(eval(input)).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function int() {
+      input = Math.floor(eval(input)).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function sin() {
+      input = Math.sin(eval(input) * Math.PI / 180).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function cos() {
+      input = Math.cos(eval(input) * Math.PI / 180).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function tan() {
+      input = Math.tan(eval(input) * Math.PI / 180).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function asin() {
+      input = (Math.asin(eval(input)) * 180 / Math.PI).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function acos() {
+      input = (Math.acos(eval(input)) * 180 / Math.PI).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function atan() {
+      input = (Math.atan(eval(input)) * 180 / Math.PI).toString();
+      document.getElementById("display").value = input;
+    }
+
+    function inverse() {
+      input = (1 / eval(input)).toString();
+      document.getElementById("display").value = input;
+    }
+
+    // Fungsi Shift
+    function toggleShift() {
+      const primary = document.getElementById("primary-buttons");
+      const shift = document.getElementById("shift-buttons");
+      primary.classList.toggle("hidden");
+      shift.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
