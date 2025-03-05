@@ -9,24 +9,15 @@
   <meta name="theme-color" content="#007bff">
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+      font-family: Arial, Helvetica, sans-serif; margin: 0;
+      padding: 0; background-color: #f4f4f4; }
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #f7f7f7;
-      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      background-color: #f7f7f7;  padding: 10px 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
+      font-size: 20px; font-weight: bold; color: #333;}
     #darkModeToggle {
       background: none;
       border: none;
@@ -35,18 +26,12 @@
       padding: 5px;
     }
     .dark-mode {
-      background-color: #111b21;
-      color: white;
-    }
+      background-color: #111b21; color: white;}
     .dark-mode nav {
-      background-color: #202c33;
-    }
+      background-color: #202c33;}
     .dark-mode .logo {
-      color: white;
-    }
-    main {
-      padding: 2px;
-    }
+      color: white; }
+    main { padding: 2px;}
     .container {
       background: white;
       padding: 10px;
@@ -105,9 +90,7 @@
       background: #111b21;
       color: #eaeaea;
     }
-    .content {
-        margin-top: 15px;
-    }
+    .content { margin-top: 15px; }
   </style>
 </head>
 <body>
@@ -176,6 +159,10 @@
     // https://api.myquran.com/v2/sholat/kota/semua
     // Data wilayah dari JSON
     const wilayahData = [
+        {"id":"1206","lokasi":"KAB. CIANJUR"},
+        {"id":"1104","lokasi":"KAB. TANGERANG"},
+        {"id":"1107","lokasi":"KOTA TANGERANG"},
+        {"id":"1108","lokasi":"KOTA TANGERANG SELATAN"},
         {"id":"1001","lokasi":"KAB. LAMPUNG TENGAH"},
         {"id":"1002","lokasi":"KAB. LAMPUNG UTARA"},
         {"id":"1003","lokasi":"KAB. LAMPUNG SELATAN"},
@@ -186,11 +173,7 @@
         {"id":"1008","lokasi":"KAB. PESISIR BARAT"},
         {"id":"1009","lokasi":"KAB. PRINGSEWU"},
         {"id":"1010","lokasi":"KAB. TULANG BAWANG"},
-        {"id":"1104","lokasi":"KAB. TANGERANG"},
-        {"id":"1107","lokasi":"KOTA TANGERANG"},
-        {"id":"1108","lokasi":"KOTA TANGERANG SELATAN"},
         {"id":"1201","lokasi":"KAB. BANDUNG"},
-        {"id":"1206","lokasi":"KAB. CIANJUR"},
         {"id":"1207","lokasi":"KAB. CIREBON"},
         {"id":"1208","lokasi":"KAB. GARUT"},
         {"id":"1209","lokasi":"KAB. INDRAMAYU"},
@@ -246,7 +229,7 @@
         {"id":"0906","lokasi":"KAB. BELITUNG TIMUR"},{"id":"0907","lokasi":"KOTA PANGKAL PINANG"}
     ];
 
-    // Tambahkan wilayah ke dalam dropdown
+    // Tambahkan wilayah ke dalam dropdown bogor
     function loadWilayah() {
       wilayahDropdown.innerHTML = "";
       wilayahData.forEach(wilayah => {
