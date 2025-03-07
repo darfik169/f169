@@ -1,93 +1,24 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
-    <title>Konversi Kalender Masehi ke Hijriyah dan Sebaliknya</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-  }
-  h1,h2,h3 {
-    text-align: center;
-    color: #343a40;
-    margin-top: 20px;
-  }
-  form {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    font-size: 15px;
-  }
-  table {
-    width: 100%;
-    max-width: 800px;
-    font-size: 15px;
-    border-collapse: collapse;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  th, td {
-    padding: 12px;
-    font-size: 15px;
-    text-align: left;
-  }
-  th {
-    background-color: #007bff;
-    color: white;
-  }
-  td {
-    border: 1px solid #dee2e6;
-  }
-  select, button {
-    width: 100%;
-    padding: 8px;
-    margin: 4px 0;
-    font-size: 15px;
-    box-sizing: border-box;
-  }
-  
-input[type="text"] {
-    width: 100px;
-    padding: 8px;
-    margin: 4px 0;
-    font-size: 15px;
-    box-sizing: border-box;
-  }  
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #218838;
-  }
-</style>
-<script>
+  // script ini di ambil dari website falakmu.id
+  // link: https://falakmu.id/khgt/uq/
+  // saya meminta izin kepada pemilik website untuk menggunakan script ini semoga tidak keberatan sekaligus saya ucapkan terima kasih dan semego allah memberikan keberkahan kepada pemilik website falakmu.id
   function gmod(n, m) {
     return ((n % m) + m) % m;
   }
 
   function setdate() {
     var today = new Date();
-    document.calendar.year.value = today.getFullYear();
-    document.calendar.month.selectedIndex = today.getMonth();
-    document.calendar.day.value = today.getDate();
+    document.kalender.year.value = today.getFullYear();
+    document.kalender.month.selectedIndex = today.getMonth();
+    document.kalender.day.value = today.getDate();
     ummalqura();
     calculateJavaneseMarketDay();
   }
 
   function ummalqura() {
-    var day = parseFloat(document.calendar.day.value);
-    var month = document.calendar.month.selectedIndex;
-    var year = parseFloat(document.calendar.year.value);
+    var day = parseFloat(document.kalender.day.value);
+    var month = document.kalender.month.selectedIndex;
+    var year = parseFloat(document.kalender.year.value);
 
     m = month + 1;
     y = year;
@@ -114,11 +45,11 @@ input[type="text"] {
     month -= 1;
     year = c - 4716;
     var wd = gmod(cjdn + 1, 7) + 1;
-    document.calendar.day.value = day;
-    document.calendar.month.selectedIndex = month - 1;
-    document.calendar.year.value = year;
-    document.calendar.wkday.selectedIndex = wd - 1;
-    document.calendar.julday.value = cjdn;
+    document.kalender.day.value = day;
+    document.kalender.month.selectedIndex = month - 1;
+    document.kalender.year.value = year;
+    document.kalender.wkday.selectedIndex = wd - 1;
+    document.kalender.julday.value = cjdn;
     var mcjdn = cjdn - 2400000;
 
     for (var i = 0; i < ummalqura_dat.length; i++) {
@@ -132,17 +63,17 @@ input[type="text"] {
     var id = mcjdn - ummalqura_dat[i - 1] + 1;
     var ml = ummalqura_dat[i] - ummalqura_dat[i - 1];
     
-    document.calendar.iday1.value = id;
-    document.calendar.imonth1.selectedIndex = im - 1;
-    document.calendar.iyear1.value = iy;
+    document.kalender.iday1.value = id;
+    document.kalender.imonth1.selectedIndex = im - 1;
+    document.kalender.iyear1.value = iy;
 
     calculateJavaneseMarketDay();
   }
 
   function convertToGregorian() {
-    var hDay = parseFloat(document.calendar.iday1.value);
-    var hMonth = document.calendar.imonth1.selectedIndex + 1;
-    var hYear = parseFloat(document.calendar.iyear1.value);
+    var hDay = parseFloat(document.kalender.iday1.value);
+    var hMonth = document.kalender.imonth1.selectedIndex + 1;
+    var hYear = parseFloat(document.kalender.iyear1.value);
 
     var iln = (hYear - 1) * 12 + hMonth;
     var mcjdn = hDay + ummalqura_dat[iln - 16260 - 1] - 1;
@@ -162,17 +93,17 @@ input[type="text"] {
     var month = (e < 14) ? e - 1 : e - 13;
     var year = (month > 2) ? c - 4716 : c - 4715;
 
-    document.calendar.day.value = Math.floor(day);
-    document.calendar.month.selectedIndex = month - 1;
-    document.calendar.year.value = year;
+    document.kalender.day.value = Math.floor(day);
+    document.kalender.month.selectedIndex = month - 1;
+    document.kalender.year.value = year;
     
     calculateJavaneseMarketDay();
   }
 
   function calculateJavaneseMarketDay() {
     const javaneseMarketDays = ["Pon", "Wage", "Kliwon", "Legi","Pahing" ];
-    const baseDate = new Date(500, 0, 1); // Base date for Javanese calendar reference
-    const currentDate = new Date(document.calendar.year.value, document.calendar.month.selectedIndex, document.calendar.day.value);
+    const baseDate = new Date(500, 0, 1); // Base date for Javanese kalender reference
+    const currentDate = new Date(document.kalender.year.value, document.kalender.month.selectedIndex, document.kalender.day.value);
     const diffDays = Math.floor((currentDate - baseDate) / (1000 * 60 * 60 * 24));
     const javaneseMarketDay = javaneseMarketDays[diffDays % 5];
     
@@ -286,82 +217,3 @@ input[type="text"] {
     89430, 89460, 89489, 89519, 89548, 89578, 89607, 89637, 89666, 89696, 89725, 89755, 89784, 89814, 89843, 89873, 89902, 89932, 89961, 89991,
     90020
   ];
-</script>
-</head>
-
-<body onload="setdate()">
-  <h3>Konversi Kalender Masehi ke Hijriyah dan Sebaliknya</h3>
-  <form name="calendar">
-    <table style="font-size:15px; width: 100%;">
-      <tr>
-        <th  style="font-size:15px; width: 50%;" colspan="3" background-color: #E9E9F0;">Kalender Masehi</th>
-        <th  style="font-size:15px; width: 50%; background-color: darkgreen;" colspan="3">Kalender Hijriyah</th>
-      </tr>
-      <tr>
-        <td style="font-size:15px;  background-color: #E9E9F0;">Hari:</td>
-        <td style="font-size:15px;  background-color: #E9E9F0;"><input type="text" name="day" step="1"></td>
-        <td style="font-size:15px;  background-color: #E9E9F0;">
-          <select name="wkday">
-            <option>Minggu</option>
-            <option>Senin</option>
-            <option>Selasa</option>
-            <option>Rabu</option>
-            <option>Kamis</option>
-            <option>Jumat</option>
-            <option>Sabtu</option>
-          </select>
-        </td>
-        <td style="font-size:15px; background-color: #E5F8DE;">Hari:</td>
-        <td style="font-size:15px; background-color: #E5F8DE;"><input type="text" name="iday1"></td>
-        <td style="font-size:15px; background-color: #E5F8DE;"><p id="javaneseMarketDay"></p></td> 
-      </tr>
-      <tr>
-        <td style="font-size:15px;  background-color: #E9E9F0;">Bulan:</td>
-        <td style="font-size:15px; background-color: #E9E9F0;">
-          <select name="month">
-            <option>Januari</option>
-            <option>Februari</option>
-            <option>Maret</option>
-            <option>April</option>
-            <option>Mei</option>
-            <option>Juni</option>
-            <option>Juli</option>
-            <option>Agustus</option>
-            <option>September</option>
-            <option>Oktober</option>
-            <option>November</option>
-            <option>Desember</option>
-          </select>
-        </td>
-        <td style="font-size:15px;  background-color: #E9E9F0;">Julian day <input type="text" name="julday" disabled></td>
-        <td style="font-size:15px; background-color: #E5F8DE;">Bulan:</td>
-        <td style="font-size:15px; background-color: #E5F8DE;">
-          <select name="imonth1">
-            <option>Muharram</option>
-            <option>Safar</option>
-            <option>Rabi'ul Awwal</option>
-            <option>Rabi'ul Akhir</option>
-            <option>Jumadil Awwal</option>
-            <option>Jumadil Akhir</option>
-            <option>Rajab</option>
-            <option>Sya'ban</option>
-            <option>Ramadhan</option>
-            <option>Syawwal</option>
-            <option>Dzulqa'dah</option>
-            <option>Dzulhijjah</option>
-          </select>
-        </td>
-        <td style="font-size:15px; background-color: #E5F8DE;"></td>
-      </tr>
-      <tr>
-        <td style="font-size:15px; background-color: #E9E9F0;">Tahun:</td>
-        <td style="font-size:15px; background-color: #E9E9F0;"><input type="text" name="year"></td>
-        <td style="font-size:15px; background-color: #E9E9F0;;"><button type="button" onclick="ummalqura()">Ke Hijriyah</button></td>
-        <td style="font-size:15px; background-color: #E5F8DE;">Tahun:</td>
-        <td style="font-size:15px; background-color: #E5F8DE;"><input type="text" name="iyear1"></td>
-        <td style="font-size:15px; background-color: #E5F8DE;"><button type="button" onclick="convertToGregorian()">Ke Masehi</button></td>
-      </tr>
-    </table>
-  </form>
-</body>
-</html>
