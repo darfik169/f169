@@ -4,69 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Yang Baru</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#007bff">
+  <title>Navigation Page</title>
+  <link rel="stylesheet" href="../../styles/main.css">
   <style>
-    body {
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-nav {
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .button-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f7f7f7;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-#darkModeToggle {
-    background: none;
+.button-container button {
+    background-color: #007bff;
+    color: #ffffff;
     border: none;
-    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 10px;
     cursor: pointer;
-    padding: 5px;
-}
-.dark-mode {
-    background-color: #111b21;
-    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.dark-mode nav {
-    background-color: #202c33;
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
-.dark-mode .logo {
-    color: white;
-}
-main {
-    padding: 2px;
-}
-
-.container {
-    background: white;
-    padding: 10px;
-    margin: 10px auto;
-    width: 90%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px gray;
-}
-.dark-mode .container {
-    background: #111b21;
-    box-shadow: 0px 0px 10px #326c9e;
-}
-.dark-mode a {
-    color: #b44444;
-}
-ul, li {
-   margin-bottom: 5px;
+.button-container button:active {
+    transform: translateY(0);
+}  
+.jk {
+    margin-bottom: 20px;
 }
   </style>
 </head>
@@ -75,38 +47,18 @@ ul, li {
     <div class="logo">F169</div>
     <button id="darkModeToggle">🌙</button>
   </nav>
-    <main>
-        <div class="container">
-            <h2>Fitur Tambahan </h2>
-            <p>Ada tambahan beberapa fitur yang kami sajikan untuk anda. <br> berikut fitur-fiturnya:</p>
-            <ul>
-                <li>Kalkulator sederana <a href="../update/alat/kalkulator.html"> Lihat</a></li>
-                <li>Waktu Shalat Reel Time <a href="../waktu-sholat/index.html"> Lihat</a></li>
-                <li>Konversi Hijri ke Masehi dan Masehi ke Hijri <a href="../kalender/convert/index.html">Lihat</a></li>
-                <li>Hitung Hari Dari  Tanggal Lahir <a href="../kalender/hitung-hari/index.html">Lihat</a></li>
-            </ul>
-        </div>
+  <main>
+    <div class="container">
+      <h2>Menu Lainnya</h2>
+      <div class="button-container">
+        <button onclick="location.href='../update/alat/kalkulator.html'">kalkulator</button>
+        <button onclick="location.href='../waktu-sholat/index.html'">Waktu Shalat Reel Time</button>
+        <button onclick="location.href='../kalender/convert/index.html'">Konversi Hijriyah & Masehi</button>
+        <button onclick="location.href='../kalender/hitung-hari/index.html'">Hitung Hari</button>
       </div>
-    </main>
-<script>
-  const darkModeToggle = document.getElementById("darkModeToggle");
-
-darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-        darkModeToggle.textContent = "☀️";  
-    } else {
-        localStorage.setItem("theme", "light");
-        darkModeToggle.textContent = "🌙";
-    }
-});
-
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    darkModeToggle.textContent = "☀️";
-}
-</script>
+      <div class="jk"></div>
+    </div>
+  </main>
+  <script src="../../main/script.js"></script>
 </body>
 </html>
