@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <style>
+  body {
+    margin: 1%;
+  }
+  .notification {
+    background-color: var(--bkg-all-articel);
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    font-family: Arial, sans-serif;
+  }
+  .notification h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .notification p {
+    margin: 0;
+  }
+  .notification ul {
+    padding-left: 20px;
+  }
+  .notification ul li {
+    margin-bottom: 10px;
+  }
+</style>
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="">F169</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo"><span class="logo-name">F169</span><i class="bx bx-x"></i></div>
+          <ul class="links">
+            <li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white"></i></li>
+            <li class="li-nav"><a href="../index.html">HOME</a></li>
+            <li class="li-nav"><a href="../hitungan-hisab/taqwiem.html">TAQWIEM</a></li>
+            <li class="li-nav">
+              <a href="">HISAB ISTILAHI</a><i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+              </ul>
+            </li>
+            <li class="li-nav">
+              <a href="">PENJELASAN HISAB</a><i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li class="li-nav"><a href="../penjelasan-hisab/pengantar.html">Pendahuluan</a></li>
+                <li class="li-nav"><a href="../penjelasan-hisab/khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                <li><a href="../penjelasan-hisab/hisab-istilahi/tahun.hijriyah.html">Awal Tahun Hijriyah</a></li>
+                <li>
+                  <a href="../penjelasan-hisab/hisab-istilahi/tahun-masehi.html">Awal Tahun Masehi</a>
+                </li>
+                <li class="more">
+                  <span><a href="#">Penjelasan Taqwiem</a><i class="bx bxs-chevron-right arrow more-arrow"></i></span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                    <li class="li-nav">
+                      <a href="../penjelasan-hisab/taqwiem-bab2.html">Taqwiem Bab 2</a>
+                    </li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="li-nav"><a href="../footer/tentang.html">TENTANG</a></li>
+            <li class="li-nav">
+              <a href="../footer/contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <form role="search" id="form"><input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" /></form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jarak"></div>
+    <article class="all-articel"> 
+      <div class="notification">
+        <h2>Tentang</h2>
+        <p class="p-articel">F169 Adalah singkatan dari "Falak 169" Nomor 169 adalah nomor yang identik dengan nama "PON-PES Daaru Al-FIkar" atau suka di sebut dengan sebutan "Darfik 169" <br><br>
+        Website ini di kembangkan oleh para santri Ponpes Darfik 169 yang bertujuan untuk mempermudah dalam menghitung dan memahami ilmu falak dan hisab <br>
+        </p>
+      </div>
+    </article>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../main/main.js"></script>
+  </body>
+</html>
