@@ -145,6 +145,54 @@
       </div>
     </article>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai input
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let statusMessage = document.getElementById("statusMessage");
+
+    // Validasi input
+    if (name === "" || email === "" || message === "") {
+        statusMessage.style.color = "red";
+        statusMessage.textContent = "Semua kolom harus diisi!";
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        statusMessage.style.color = "red";
+        statusMessage.textContent = "Format email tidak valid!";
+        return;
+    }
+
+    // Nomor WhatsApp tujuan (Ganti dengan nomor Anda)
+    let whatsappNumber = "6285882499758"; 
+
+    // Format pesan yang akan dikirim ke WhatsApp
+    let whatsappMessage = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+    whatsappMessage = encodeURIComponent(whatsappMessage);
+
+    // Kirim ke WhatsApp dengan membuka tab baru
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`, "_blank");
+
+    // Tampilkan notifikasi sukses
+    statusMessage.style.color = "green";
+    statusMessage.textContent = "Pesan Anda telah berhasil dikirim!";
+
+    // Reset formulir setelah berhasil dikirim
+    document.getElementById("contactForm").reset();
+});
+
+// Fungsi validasi email
+function validateEmail(email) {
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
+
+    </script>
     <script src="../main/main.js"></script>
   </body>
 </html>
