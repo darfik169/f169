@@ -46,7 +46,7 @@ body.dark-theme {
   --bkg-button-secondary-start-hover: #546b79;
   --clr-button-secondary-start-hover: #ffffff;
   --box-button-secondary-start-hover: 0 8px 12px rgba(0, 0, 0, 0.4);
-  --box-shadow: 0 4px 8px rgba(243, 226, 226, 0.1);
+  --box-shadow: 0 4px 20px rgba(243, 226, 226, 0.1);
   --border: 1px solid #3f3535;
   --text-clr-hover: #f8f0f0;
 }
@@ -91,14 +91,20 @@ body {
   --bkg-next: #fff;
   --color-next: #123;
   --tgl-pembuatan: #345;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow: 4px 4px 4px 8px rgba(0, 0, 0, 0.1);
   --border: 1px solid #4e7c4e;
   --text-clr-hover: #f7f3f3;
 }
 
 nav {
   background: var(--bkg-nav);
-} /*dark mode*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+  z-index: 99;
+} 
 nav .navbar .links li .sub-menu {
   background: var(--sub-menu);
 }
@@ -499,7 +505,9 @@ header.masthead {
 .jarak {
   margin-top: 80px;
 }
-
+.jarak2 {
+  margin-top: 20px;
+}
 .divBacaJuga {
   margin-top: 0px;
   background-color: #eaeaea;
@@ -622,9 +630,7 @@ header.masthead {
   color: #000;
 }
 
-.kotakinput {
-  color: var(--color-input);
-}
+
 .w-f {
   width: 152px;
 }
@@ -850,4 +856,23 @@ form.whatsapp-form {
 select option {
   background: var(--button-hs-hover);
   color: var(--text-clr-hover);
+}
+
+.kotakinput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: var(--border);
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background: var(--background-color);
+    color: var(--color-input);
+}
+.kotakinput:focus {
+    outline: none;
+}
+.kotakinput:hover {
+    background-color: var(--button-hs-hover);
+    color: var(--text-clr-hover);
 }

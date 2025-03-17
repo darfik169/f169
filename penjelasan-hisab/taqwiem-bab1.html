@@ -478,6 +478,18 @@ Lanjut di Bab 2.<br><br>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 <script src="../main/main.js"></script>
-         
+ <script>
+  let lastScrollTop = 0;
+const nav = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    nav.style.top = "-70px"; 
+  } else {
+    nav.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+});
+ </script>        
 </body>
 </html>
