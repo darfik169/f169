@@ -1,54 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Perhitungan taqwiemun nayyirin risalah uula, taqwiemun nayyirain termasuk hisab goer qhot'i taqribi haqieqie, disini kita membuat program perhitungan hisab taqwimun nayyirain untuk mempermudah para al-hasib yang ingin mengetahui kapan terjadinya pergantian bulan hijriyah">
-  <meta name="keywords" content="perhitungan taqwiemun nayyirin risalah uula, taqwiemun nayyirain, hisab qhot'i, hisab goer qhot'i, f169, perhitungan hisab, kalkulator hisab, perhitungan falak, ngaji falak, ngaji hisab">
-  <title>Taqwiemun Nayyirain</title>
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/style-footer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body> 
-   <nav> 
-    <div class="navbar"><i class='bx bx-menu'></i>
-      <div class="logo"><a href="">F169</a></div><div class="nav-links"><div class="sidebar-logo"> <span class="logo-name">F169</span><i class='bx bx-x' ></i></div> <ul class="links"><li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white;"></i></li><li class="li-nav"><a href="../index.html">HOME</a></li><li class="li-nav"><a href="../hitungan-hisab/taqwiem.html">TAQWIEM</a></li><li class="li-nav"><a href="">HISAB ISTILAHI</a><i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i><ul class="htmlCss-sub-menu sub-menu"><li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li><li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li></ul></li><li class="li-nav"><a href="">PENJELASAN HISAB</a><i class='bx bxs-chevron-down js-arrow arrow '></i><ul class="js-sub-menu sub-menu"><li class="li-nav"><a href="../penjelasan-hisab/pengantar.html">Pendahuluan</a></li><li class="li-nav"><a href="../penjelasan-hisab/khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li> <li ><a href="../penjelasan-hisab/hisab-istilahi/tahun.hijriyah.html">Awal Tahun Hijriyah</a></li><li ><a href="../penjelasan-hisab/hisab-istilahi/tahun-masehi.html">Awal Tahun Masehi</a></li><li class="more"><span><a href="#">Penjelasan Taqwiem</a><i class='bx bxs-chevron-right arrow more-arrow'></i></span><ul class="more-sub-menu sub-menu"><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab1.html">Taqwiem Bab 1</a></li><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab2.html">Taqwiem Bab 2</a></li><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab3.html">Taqwiem Bab 3</a></li><li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab4.html">Taqwiem Bab 4</a></li></ul></li></ul></li><li class="li-nav"><a href="../footer/tentang.html">TENTANG</a></li><li class="li-nav"><a href="../footer/contact.html">CONTACT</a></li></ul></div><div class="search-box"><i class='bx bx-search'></i><div class="input-box"><form role="search" id="form"><input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content"></form></div></div></div></nav><div class="jaraktaqwiem"><div class="container px-5 py-40 mx-auto"><div class="tgh flex flex-col text-center w-full mb-12"><h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">TAQWIEMUN NAYYIRAIN</h1><p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold">Perhitungan Hisab Sullamun Nayirain Bulan Hijriyah</p><p class="lg:w-2/3 mx-auto leading-relaxed text-base ">Latitude <span id="latitude">0.00</span>° Longitude <span id="longitude" class="">0.00</span>°</p></div><div class="lg:w-1/3 w-full mx-auto px-8"><div class="relative flex-grow w-full"><div class="custom-select"><select name="languages" id="tahunmajmuah"><option value="0">Sinin Majmu'ah :</option> <option value="1410">1410</option><option value="1420">1420</option><option value="1430">1430</option><option value="1440">1440</option><option value="1450">1450</option><option value="1460">1460</option><option value="1470">1470</option><option value="1480">1480</option><option value="1490">1490</option><option value="1500">1500</option><option value="1510">1510</option><option value="1520">1520</option><option value="1530">1530</option><option value="1540">1540</option><option value="1550">1550</option></select></div><div class="custom-select"> <select name="languages" id="tahunmabsutoh"><option value="0">Sinin Mabsutoh :</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
-    <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div><div class="custom-select"> <select name="languages" id="bulanhijriyah"><option value="0">Bulan :</option><option value="1">Muharom</option><option value="2">Sopar</option><option value="3">Robi'ul Awal</option><option value="4">Robi'ust Stani</option><option value="5">Jumadil Awal</option><option value="6">Jumadist Stani</option><option value="7">Rojab</option><option value="8">Sya'ban</option><option value="9">Romadhon</option><option value="10">Syawal</option><option value="11">Dzul Qo'dah</option><option value="12">Dzul Hijjah</option></select></div><div class="custom-select"><select name="languages" id="derajatirtipa" ><option value="0">Irtipa :</option><option value="1">Irtipa 2°</option><option value="2">Irtipa 3°</option><option value="3">Irtipa 6°</option><option value="4">Irtipa 7°</option></select></div><button type="button" value="Hitung" onclick="calculate1()" class="button-hs" > HASIL</button><button type="button" value="Hitung" onclick="calculate2()" class="button-hs" > HITUNG</button></form></div></div></div></div></div><article class="all-articel"><p class="p-articel" id="showdata1"></p><p class="p-articel" id="showdata"></p></article><button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i> </button>
-    <article class="all-articel">
-      <h2 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Cara Penggunaan</h2>
-      <p class="p-articel">Klik tombol 'Hitung atau Hasil' untuk memastikan Longitudenya sudah aktif Lalu Pilih Tahun Majmu'ah, Tahun Mabsutoh, Bulan Hijriyah dan Irtipa, Kemudian klik tombol Hasil atau Hitung, Maka akan muncul hasilnya.</p>
-    </article>
-    <article class="all-articel"><h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Perhatian</h1><p class="p-articel">Penting untuk mengaktipkan Lokasi di HP atau PC anda sebelum mengklik tombol Hasil atau tombol Hitung untuk memunculkan lintang dan busur tempat anda, lintang dan busur bisa berubah setiap kali pengguna berpindah tempat.</p><p class="p-articel">ini juga penting, Ada opsi pemilihan irtipa, perbedaan dalam pemilihan irtipa hilal bisa mempengaruhi terjadinya perbedaan imkan rukyat, Jika irtipa hilal melebihi 7° maka tidak ada perbedaan hasilnya akan sama-sama imkan rukyat, tetapi jika kurang dari 7° seperti 4° maka akan ada perbedaan. Kami memakai patokan irtipa 2° menganut keterangan yang ada di <a class="a-link-web" href="../penjelasan-hisab/taqwiem-bab1.html">Kitab Sulamunnayrein</a> bahwasayanya untuk menentukan imkan rukyat cukup dengan 2° (menurut ulama muta'akhirin) , tapi ada juga yang memakai patokan irtipa 3° sebagaimana yang di terapkan oleh <a class="a-link-web" href="https://www.nu.or.id/nasional/4-ketentuan-rukyatul-hilal-nahdlatul-ulama-1ybW7">Lembaga Falakiyah PBNU</a> bahkan ada juga yang memakai patokan 6 - 7 derajat.</p><p class="p-articel">Untuk Waktu Gurubiyah kami menghitungnya dari jam 18:00 WIB itulah penyebab hasil SA'AH GURUBIYAH dan SA'AH ZAWALIYAH menitnya Sama, sedangkan waktu magrib belum tentu jam 18:00 WIB bisa saja kurang atau lebih, jadi bagi kalian yang ingin mengeroksi menitnya bisa di pas-kan dengan waktu magrib di daerah kalian pas hari ijtimanya, jika ijtima terjadi pada hari kamis maka ketahui waktu magrib hari kamis tersebut lalu dicocokan</p><p class="p-articel">Jika kalian mengklik tombol HASIL maka akan keluar hasilnya nah, didalam hasil tersebut, perhitungan waktu ZAWALIYAH Sudah kami format ke waktu WIB jadi tidak lagi berupa AM atau PM</p><h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Penutup</h1><p class="p-articel">Sekiranya terdapat kesalahan atau kekeliruan dalam perhitungan, kami mohon untuk dikoreksi.<br /> Wallahu A'lamu Bisshowab</p></ul></article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Perhitungan taqwiemun nayyirin risalah uula, taqwiemun nayyirain termasuk hisab goer qhot'i taqribi haqieqie, disini kita membuat program perhitungan hisab taqwimun nayyirain untuk mempermudah para al-hasib yang ingin mengetahui kapan terjadinya pergantian bulan hijriyah"/>
+    <meta name="keywords" content="perhitungan taqwiemun nayyirin risalah uula, taqwiemun nayyirain, hisab qhot'i, hisab goer qhot'i, f169, perhitungan hisab, kalkulator hisab, perhitungan falak, ngaji falak, ngaji hisab" />
+    <title>Taqwiemun Nayyirain</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+    <link href="../styles/style.css" rel="stylesheet" />
+    <link href="../styles/style-footer.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="">F169</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo"><span class="logo-name">F169</span><i class="bx bx-x"></i></div>
+          <ul class="links">
+            <li onclick="myFunction()" class="btn-toggle li-nav"><i class="fa fa-adjust" style="color: white"></i></li>
+            <li class="li-nav"><a href="../index.html">HOME</a></li>
+            <li class="li-nav"><a href="../hitungan-hisab/taqwiem.html">TAQWIEM</a></li>
+            <li class="li-nav">
+              <a href="">HISAB ISTILAHI</a><i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-hijriyah.html">Perhitungan Tahun Hijriyah</a></li>
+                <li class="li-nav"><a href="../hitungan-hisab/perhitungan-tahun-masehi.html">Perhitungan Tahun Masehi</a></li>
+              </ul>
+            </li>
+            <li class="li-nav">
+              <a href="">PENJELASAN HISAB</a><i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li class="li-nav"><a href="../penjelasan-hisab/pengantar.html">Pendahuluan</a></li>
+                <li class="li-nav"><a href="../penjelasan-hisab/khulasoh-hisab-istilahi.html">Khulasoh Hisab Istilahi</a></li>
+                <li><a href="../penjelasan-hisab/hisab-istilahi/tahun.hijriyah.html">Awal Tahun Hijriyah</a></li>
+                <li><a href="../penjelasan-hisab/hisab-istilahi/tahun-masehi.html">Awal Tahun Masehi</a></li>
+                <li class="more">
+                  <span><a href="#">Penjelasan Taqwiem</a><i class="bx bxs-chevron-right arrow more-arrow"></i></span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab1.html">Taqwiem Bab 1</a></li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab2.html">Taqwiem Bab 2</a></li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab3.html">Taqwiem Bab 3</a></li>
+                    <li class="li-nav"><a href="../penjelasan-hisab/taqwiem-bab4.html">Taqwiem Bab 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="li-nav"><a href="../footer/tentang.html">TENTANG</a></li>
+            <li class="li-nav"><a href="../footer/contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <form role="search" id="form"><input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" /></form>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="jarak"></div>
-    <footer class="footer"><div class="container"><div class="row"><div class="footer-col"><h4> contact </h4><p class="p-information"><i class="fas fa-map-marker-alt"></i> Cianjur, Jawa Barat</p>
-      <p class="p-information"><i class="fas fa-phone"></i> Phone: <a class="a-information" href="tel:+6285882499758">+62 858 8249 9758</a></p><p class="p-information"><i class="fas fa-envelope"></i> Email: <a class="a-information" href="mailto:daarualfikar169@gmail.com">daarualfikar169.com</a></p></div><div class="footer-col"><h4> informasi </h4><ul class="ul-ft"><li class="li-ft"><a href="../footer/visimisi.html">visi misi</a></li><li class="li-ft"><a href="../footer/disclaimer.html">disclaimer</a></li></ul></div><div class="footer-col"><h4>Pustaka</h4><ul class="ul-ft"><li class="li-ft"><a href="../update/pustaka/alhasyiah.html">Al-hasyiah</a></li><li class="li-ft"><a href="../update/pustaka/program-hisab.html">Program</a></li><li class="li-ft"><a href="../update/pustaka/microsoft.html">File Microsoft</a></li></ul></div><div class="footer-col"><h4>follow us</h4><div class="social-links"> <div class="col-lg-4 my-3 my-lg-0"><a class="btn btn-dark btn-social mx-2" href="https://youtube.com/@darfik169?si=Hsf6eoYTco4zDZYD" aria-label="Youtube"><i class="fab fa-youtube"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100026754870707&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/darfik169?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a class="btn btn-dark btn-social mx-2" href="https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a></div> </div></div></div></div></footer> 
-   <script> const btn = document.querySelector(".btn-toggle"); const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)"); const savedTheme = localStorage.getItem("theme");if (savedTheme) {document.body.classList.add(savedTheme + "-theme");} else {const defaultTheme = prefersDarkScheme.matches ? "dark" : "light";document.body.classList.add(defaultTheme + "-theme");localStorage.setItem("theme", defaultTheme);}btn.addEventListener("click", () => {const currentTheme = document.body.classList.contains("dark-theme") ? "dark" : "light";const newTheme = currentTheme === "dark" ? "light" : "dark";document.body.classList.toggle("dark-theme");document.body.classList.toggle("light-theme");localStorage.setItem("theme", newTheme);});</script>
-<script> var x, i, j, l, ll, selElmnt, a, b, c; x = document.getElementsByClassName("custom-select"); l = x.length;for (i = 0; i < l; i++) {selElmnt = x[i].getElementsByTagName("select")[0]; ll = selElmnt.length; a = document.createElement("DIV"); a.setAttribute("class", "select-selected"); a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);  b = document.createElement("DIV");  b.setAttribute("class", "select-items select-hide"); for (j = 1; j < ll; j++) { c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML; c.addEventListener("click", function(e) { var y, i, k, s, h, sl, yl; s = this.parentNode.parentNode.getElementsByTagName("select")[0]; sl = s.length;  h = this.parentNode.previousSibling; for (i = 0; i < sl; i++) { if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i; h.innerHTML = this.innerHTML;  y = this.parentNode.getElementsByClassName("same-as-selected");   yl = y.length;  for (k = 0; k < yl; k++) {    y[k].removeAttribute("class");  } this.setAttribute("class", "same-as-selected"); break;}}
-  h.click();});b.appendChild(c);} x[i].appendChild(b);a.addEventListener("click", function(e) {e.stopPropagation();closeAllSelect(this);this.nextSibling.classList.toggle("select-hide");this.classList.toggle("select-arrow-active");});}
-function closeAllSelect(elmnt) { var x, y, i, xl, yl, arrNo = []; x = document.getElementsByClassName("select-items");  y = document.getElementsByClassName("select-selected");  xl = x.length;  yl = y.length;  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {arrNo.push(i)
-    } else {y[i].classList.remove("select-arrow-active");}} for (i = 0; i < xl; i++) { if (arrNo.indexOf(i)) { x[i].classList.add("select-hide");}}} </script><script> let mybutton = document.getElementById("myBtn"); window.onscroll = function() {scrollFunction()}; function scrollFunction() { if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 500) {  mybutton.style.display = "block"; } else {  mybutton.style.display = "none";}}function topFunction() {
-  document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }</script><script>let navbar = document.querySelector(".navbar"); let kotakPencarian = document.querySelector(".search-box .bx-search");
-kotakPencarian.addEventListener("click", ()=>{navbar.classList.toggle("showInput");if(navbar.classList.contains("showInput")){kotakPencarian.classList.replace("bx-search" ,"bx-x");}else {kotakPencarian.classList.replace("bx-x" ,"bx-search");}});
-let navLinks = document.querySelector(".nav-links");let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");menuOpenBtn.onclick = function() {navLinks.style.left = "0";}
-menuCloseBtn.onclick = function() {navLinks.style.left = "-100%";}
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");htmlcssArrow.onclick = function() {navLinks.classList.toggle("show1");}
-let moreArrow = document.querySelector(".more-arrow");moreArrow.onclick = function() {navLinks.classList.toggle("show2");}
-let jsArrow = document.querySelector(".js-arrow");jsArrow.onclick = function() {navLinks.classList.toggle("show3");}
-const f = document.getElementById('form');const q = document.getElementById('query');
-const google = 'https://www.google.com/search?q=darfik169+f169%3A+';const site = '';
-function submitted(event) {event.preventDefault();const url = google + site + '+' + q.value;
-const win = window.open(url, '_blank');win.focus();}f.addEventListener('submit', submitted);</script> <script src="../script/logic/tq.js"></script>
-</body>
+    <div class="form-taqwiem">
+        <div class="input-taqwiem">
+            <h1 class="h1-taqwiem">TAQWIEMUN NAYYIRAIN</h1>
+            <p class="p-taqwiem">Perhitungan Hisab Sullamun Nayirain Bulan Hijriyah</p>
+            <p class="p-lok">Latitude <span id="latitude">0.00</span>° Longitude <span id="longitude" class="">0.00</span>°</p>
+        </div>
+        <div class="">
+            <div class="taqwiem-select">
+                <select name="languages" id="tahunmajmuah">
+                    <option value="0">Sinin Majmu'ah :</option> 
+                    <option value="1410">1410</option>
+                    <option value="1420">1420</option>
+                    <option value="1430">1430</option>
+                    <option value="1440">1440</option>
+                    <option value="1450">1450</option>
+                    <option value="1460">1460</option>
+                    <option value="1470">1470</option>
+                    <option value="1480">1480</option>
+                    <option value="1490">1490</option>
+                    <option value="1500">1500</option>
+                    <option value="1510">1510</option>
+                    <option value="1520">1520</option>
+                    <option value="1530">1530</option>
+                    <option value="1540">1540</option>
+                    <option value="1550">1550</option>
+                </select>
+                </div>
+                <div class="taqwiem-select"> 
+                    <select name="languages" id="tahunmabsutoh">
+                        <option value="0">Sinin Mabsutoh :</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="taqwiem-select"> 
+                    <select name="languages" id="bulanhijriyah">
+                        <option value="0">Bulan :</option>
+                        <option value="1">Muharom</option>
+                        <option value="2">Sopar</option>
+                        <option value="3">Robi'ul Awal</option>
+                        <option value="4">Robi'ust Stani</option>
+                        <option value="5">Jumadil Awal</option>
+                        <option value="6">Jumadist Stani</option>
+                        <option value="7">Rojab</option>
+                        <option value="8">Sya'ban</option>
+                        <option value="9">Romadhon</option>
+                        <option value="10">Syawal</option>
+                        <option value="11">Dzul Qo'dah</option>
+                        <option value="12">Dzul Hijjah</option>
+                    </select>
+                </div>
+                <div class="taqwiem-select">
+                    <select name="languages" id="derajatirtipa" >
+                        <option value="0">Irtipa :</option>
+                        <option value="1">Irtipa 2°</option>
+                        <option value="2">Irtipa 3°</option>
+                        <option value="3">Irtipa 6°</option>
+                        <option value="4">Irtipa 7°</option>
+                    </select>
+                </div>
+                <button type="button" value="Hitung" onclick="calculate1()" class="button-hs" > HASIL</button>
+                <button type="button" value="Hitung" onclick="calculate2()" class="button-hs" > HITUNG</button></form>
+            </div>
+        </div>
+
+        <article class="all-articel">
+            <p class="p-articel" id="showdata1"></p>
+            <p class="p-articel" id="showdata"></p>
+        </article>
+        <article class="all-articel">
+            <h2 class="h1-articell">Cara Penggunaan</h2>
+            <p class="p-articel">Klik tombol 'Hitung atau Hasil' untuk memastikan Longitudenya sudah aktif Lalu Pilih Tahun Majmu'ah, Tahun Mabsutoh, Bulan Hijriyah dan Irtipa, Kemudian klik tombol Hasil atau Hitung, Maka akan muncul hasilnya.</p>
+        </article>
+        <article class="all-articel">
+            <h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Perhatian</h1>
+            <p class="p-articel">Penting untuk mengaktipkan Lokasi di HP atau PC anda sebelum mengklik tombol Hasil atau tombol Hitung untuk memunculkan lintang dan busur tempat anda, lintang dan busur bisa berubah setiap kali pengguna berpindah tempat.</p>
+            <p class="p-articel">ini juga penting, Ada opsi pemilihan irtipa, perbedaan dalam pemilihan irtipa hilal bisa mempengaruhi terjadinya perbedaan imkan rukyat, Jika irtipa hilal melebihi 7° maka tidak ada perbedaan hasilnya akan sama-sama imkan rukyat, tetapi jika kurang dari 7° seperti 4° maka akan ada perbedaan. Kami memakai patokan irtipa 2° menganut keterangan yang ada di <a class="a-link-web" href="../penjelasan-hisab/taqwiem-bab1.html">Kitab Sulamunnayrein</a> bahwasayanya untuk menentukan imkan rukyat cukup dengan 2° (menurut ulama muta'akhirin) , tapi ada juga yang memakai patokan irtipa 3° sebagaimana yang di terapkan oleh <a class="a-link-web" href="https://www.nu.or.id/nasional/4-ketentuan-rukyatul-hilal-nahdlatul-ulama-1ybW7">Lembaga Falakiyah PBNU</a> bahkan ada juga yang memakai patokan 6 - 7 derajat.</p>
+            <p class="p-articel">Untuk Waktu Gurubiyah kami menghitungnya dari jam 18:00 WIB itulah penyebab hasil SA'AH GURUBIYAH dan SA'AH ZAWALIYAH menitnya Sama, sedangkan waktu magrib belum tentu jam 18:00 WIB bisa saja kurang atau lebih, jadi bagi kalian yang ingin mengeroksi menitnya bisa di pas-kan dengan waktu magrib di daerah kalian pas hari ijtimanya, jika ijtima terjadi pada hari kamis maka ketahui waktu magrib hari kamis tersebut lalu dicocokan</p>
+            <p class="p-articel">Jika kalian mengklik tombol HASIL maka akan keluar hasilnya nah, didalam hasil tersebut, perhitungan waktu ZAWALIYAH Sudah kami format ke waktu WIB jadi tidak lagi berupa AM atau PM</p>
+            <h1 class="h1-articell sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-90">Penutup</h1>
+            <p class="p-articel">Sekiranya terdapat kesalahan atau kekeliruan dalam perhitungan, kami mohon untuk dikoreksi.<br /> Wallahu A'lamu Bisshowab</p></ul>
+          </article>
+          <div class="jarak"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col"><h4> contact </h4>
+                    <p class="p-information"><i class="fas fa-map-marker-alt"></i> Cianjur, Jawa Barat</p>
+                    <p class="p-information"><i class="fas fa-phone"></i> Phone: <a class="a-information" href="tel:+6285882499758">+62 858 8249 9758</a></p>
+                    <p class="p-information"><i class="fas fa-envelope"></i> Email: <a class="a-information" href="mailto:daarualfikar169@gmail.com">daarualfikar169.com</a></p>
+                </div>
+                <div class="footer-col"><h4> informasi </h4>
+                    <ul class="ul-ft">
+                        <li class="li-ft"><a href="../footer/visimisi.html">visi misi</a></li>
+                        <li class="li-ft"><a href="../footer/disclaimer.html">disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Pustaka</h4>
+                    <ul class="ul-ft"><li class="li-ft"><a href="../update/pustaka/alhasyiah.html">Al-hasyiah</a></li>
+                        <li class="li-ft"><a href="../update/pustaka/program-hisab.html">Program</a></li>
+                        <li class="li-ft"><a href="../update/pustaka/microsoft.html">File Microsoft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col"><h4>follow us</h4>
+                    <div class="social-links"> 
+                        <div class="col-lg-4 my-3 my-lg-0">
+                            <a class="btn btn-dark btn-social mx-2" href="https://youtube.com/@darfik169?si=Hsf6eoYTco4zDZYD" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100026754870707&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/darfik169?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a> 
+                            <a class="btn btn-dark btn-social mx-2" href="https://t.me/abdulghofur234" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+    <script src="../../script/logic/tq.js"></script>
+    <script src="../../main/main.js"></script>
+  </body>
 </html>
