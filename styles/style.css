@@ -49,6 +49,7 @@ body.dark-theme {
   --box-shadow: 0 4px 20px rgba(243, 226, 226, 0.1);
   --border: 1px solid #3f3535;
   --text-clr-hover: #f8f0f0;
+  --border-focus: 1px solid #169;
 }
 body {
   --bkg-button-primary-start: linear-gradient(135deg, #f0f0f0, #d9d9d9);
@@ -94,6 +95,7 @@ body {
   --box-shadow: 4px 4px 4px 8px rgba(0, 0, 0, 0.1);
   --border: 1px solid #4e7c4e;
   --text-clr-hover: #f7f3f3;
+  --border-focus: 1px solid #009788;
 }
 
 nav {
@@ -420,7 +422,6 @@ body {
 }
 .pTglPembuatan {
   color: #6c757d;
-  font-size: 13px;
   margin-left: 9px;
 }
 header.masthead {
@@ -588,10 +589,11 @@ header.masthead {
 .table-harokat {
   border-collapse: collapse;
   width: 100%;
+  font-size: 14px;
 }
 .th-harokat,
 .td-harokat {
-  padding: 8px;
+  padding: 4px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
@@ -871,6 +873,7 @@ select option {
 }
 .kotakinput:focus {
     outline: none;
+    border: var(--border-focus);
 }
 .kotakinput:hover {
     background-color: var(--button-hs-hover);
